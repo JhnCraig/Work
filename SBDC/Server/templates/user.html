@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SBDC - Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="img/Logo.svg" class="card-svg mt-5 ms-2"
+                    style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; width: 83%; height: auto;"
+                    alt="SBDC logo">
+
+
+                <div class="card ms-0 mt-5 ps-4 pe-4 pt-3 pb-4 shadow" style="width: 300px;"
+                    style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px; width: 300px;">
+
+                    <a href="index.html" class="card mb-3 mt-2 p-2 shadow-sm" style="text-align: center;">
+                        Dashboard
+                    </a>
+
+                    <a href="sales.html" class="card mb-3 p-2 shadow-sm" style="text-align: center;">
+                        Sales
+                    </a>
+
+                    <a href="marketing.html" class="card mb-3 p-2 shadow-sm" style="text-align: center;">
+                        Marketing
+                    </a>
+
+                    <a href="engineering.html" class="card mb-3 p-2 shadow-sm" style="text-align: center;">
+                        Engineering
+                    </a>
+
+                    <a href=" " class="card mb-3 p-2 shadow-sm" style="text-align: center; margin-top: 150px;">
+                        User Management
+                    </a>
+
+                    <a href="logout.html" class="card mb-1 p-2 shadow-sm" style="text-align: center;">
+                        Logout >
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-3 pt-5" style="width: 50rem">
+                <div class="card ms-0 p-5 shadow" style="height: 43.3rem;">
+                    <label class="label"
+                        style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 40px;">User
+                        Management</label>
+
+                    <div class="row">
+                        <div class="col-10">
+                            <button class="btn btn-secondary mt-3 mb-3 shadow" style="width: 15%;"
+                                type="button">New</button>
+
+                            <button class="btn btn-danger mt-3 mb-3 shadow ms-4" style="width: 15%;"
+                                type="button">Delete</button>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label class="label mt-4"
+                                style="font-family:'Times New Roman', Times, serif; font-size: 15px;"><strong>Email:</strong></label>
+                            <label class="label mt-4 "
+                                style="margin-left: 11.2rem; font-family:'Times New Roman', Times, serif; font-size: 15px;"><strong>Password:</strong></label>
+                            <label class="label mt-4 "
+                                style="margin-left: 9rem; font-family:'Times New Roman', Times, serif; font-size: 15px;"><strong>Role:</strong></label>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="container" id="cardContainer" style="overflow-y: auto;">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class=" row">
+            <div class="card mt-5">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="cardContainer" class="d-flex flex-wrap gap-3"></div>
+
+    <script>
+        const cardContainer = document.getElementById("cardContainer");
+        const emails = ["email1@example.com", "email2@example.com", "email3@example.com", "email4@example.com", "email5@example.com", "email6@example.com", "email7@example.com"];
+        const passwords = ["password1", "password2", "password3", "password4", "password5", "password6", "password7"];
+        const roles = ["Admin", "User", "Moderator", "Admin", "User", "Moderator", "Admin"];
+
+        for (var i = 0; i < emails.length; i++) {
+            cardContainer.innerHTML += `
+        
+        <div class="col-12 d-flex gap-2 mt-2">
+
+            <!-- Email -->
+            <div class="card me-2 p-2 shadow-sm" style="width: 31%;">
+                <div class="layout">${emails[i]}</div>
+            </div>
+
+            <!-- Password -->
+            <div class="card me-2 p-2 shadow-sm" style="width: 29%;">
+                <div class="layout">${passwords[i]}</div>
+            </div>
+
+            <!-- Role -->
+            <div class="card p-2 shadow-sm" style="width: 23%;">
+                <div class="layout">${roles[i]}</div>
+            </div>
+
+        </div>
+        `;
+        }
+    </script>
+</body>
+
+</html>

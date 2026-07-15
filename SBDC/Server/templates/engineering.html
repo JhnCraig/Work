@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SBDC - Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="img/Logo.svg" class="card-svg mt-5 ms-2" style="width: 83%; height: auto;" alt="SBDC logo">
+
+
+                <div class="card ms-0 mt-5 ps-4 pe-4 pt-3 pb-4 shadow"
+                    style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px; width: 300px;">
+
+                    <a href="index.html" class="card mb-3 mt-2 p-2 shadow-sm" style="text-align: center;">
+                        Dashboard
+                    </a>
+
+                    <a href="sales.html" class="card mb-3 p-2 shadow-sm" style="text-align: center;">
+                        Sales
+                    </a>
+
+                    <a href="marketing.html" class="card mb-3 p-2 shadow-sm" style="text-align: center;">
+                        Marketing
+                    </a>
+
+                    <a href="engineering.html" class="card mb-3 p-2 shadow-sm" style="text-align: center;">
+                        Engineering
+                    </a>
+
+                    <a href="user.html" class="card mb-3 p-2 shadow-sm" style="text-align: center; margin-top: 150px;">
+                        User Management
+                    </a>
+
+                    <a href="logout.html" class="card mb-1 p-2 shadow-sm" style="text-align: center;">
+                        Logout >
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-3 pt-5" style="width: 50rem">
+                <div class="card ms-0 p-5 shadow" style="height: 45.8rem;">
+                    <label class="label"
+                        style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 40px;">Engineering</label>
+
+                    <div class="row">
+                        <div class="col-10">
+                            <button id="newBtn" class="btn btn-secondary mt-3 mb-3 shadow" style="width: 15%;"
+                                type="button">New</button>
+
+                            <button id="uploadBtn" class="btn btn-secondary mt-3 mb-3 shadow ms-4" style="width: 20%;"
+                                type="button">Import File</button>
+                            <input id="fileInput" type="file" style="display:none;" />
+
+                        </div>
+                    </div>
+
+
+                    <!-- New -->
+                    <div id="newPanel" class="card ms-0 mt-3 p-4 shadow mb-5" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="h5 mb-0"></div>
+                            <button type="button" id="closeNew" class="btn btn-sm btn-close"></button>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <input type="text" class="form-control" placeholder="Customer Name">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input type="text" class="form-control" placeholder="Product">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input type="number" class="form-control" placeholder="Amount">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-12 text-end">
+                                <button type="button" class="btn btn-success">Save</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Upload -->
+                    <div id="uploadPanel" class="card ms-0 mt-3 p-4 shadow mb-5" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="h5 mb-0"></div>
+                            <button type="button" id="closeUpload" class="btn btn-sm btn-close"></button>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label">Selected file</label>
+                                <div id="selectedFileName" class="form-control">No file chosen</div>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button type="button" class="btn btn-success">Save</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div id="cardContainer" class="card" style="height: 31rem;">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="card mt-5">
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const cardContainer = document.getElementById("cardContainer");
+        const names = ["kwinsses", "kwinsses", "kwinsses", "kwinsses", "kwinsses", "kwinsses", "kwinsses"];
+        const newBtn = document.getElementById("newBtn");
+        const newPanel = document.getElementById("newPanel");
+        const closeNew = document.getElementById("closeNew");
+        const uploadBtn = document.getElementById("uploadBtn");
+        const uploadPanel = document.getElementById("uploadPanel");
+        const closeUpload = document.getElementById("closeUpload");
+
+        const fileInput = document.getElementById("fileInput");
+        const selectedFileName = document.getElementById("selectedFileName");
+
+        newBtn.addEventListener("click", () => {
+            newPanel.style.display = "block";
+        });
+
+        closeNew.addEventListener("click", () => {
+            newPanel.style.display = "none";
+        });
+
+        // Open File explorer
+        uploadBtn.addEventListener("click", () => {
+            if (fileInput) fileInput.click();
+        });
+
+        // Show selected file name and display upload panel
+        if (fileInput) {
+            fileInput.addEventListener('change', (e) => {
+                const file = e.target.files && e.target.files[0];
+                if (!file) return;
+                if (selectedFileName) selectedFileName.textContent = file.name;
+                if (uploadPanel) uploadPanel.style.display = 'block';
+            });
+        }
+
+        closeUpload.addEventListener("click", () => {
+            uploadPanel.style.display = "none";
+        });
+
+        for (var i = 0; i < names.length; i++) {
+            cardContainer.innerHTML += `
+        <div class="col-12">
+          <div class="card ms-2 me-2 mt-2 p-2">
+            <div class="layout">${names[i]}</div>
+          </div>
+        </div>
+      `;
+        }
+    </script>
+</body>
+
+</html>
