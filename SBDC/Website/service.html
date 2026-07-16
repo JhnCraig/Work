@@ -1,19 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SBDC - info</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        /* Portfolio Book Style */
+        .service-chapter {
+            margin-bottom: 80px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 20px;
+            /* Yung parang kanto ng libro */
+            aspect-ratio: 1 / 1;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .chapter-title {
+            border-left: 5px solid #dc3545;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+    </style>
 </head>
 
 <body>
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <!-- Services Content -->
+    <div class="container py-5">
+
+        <!-- 1. General Construction Chapter -->
+        <section class="service-chapter">
+            <h3 class="chapter-title">General Construction</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="site1.jpg"></div>
+                <div class="gallery-item"><img src="site2.jpg"></div>
+                <div class="gallery-item"><img src="site3.jpg"></div>
+                <div class="gallery-item"><img src="site4.jpg"></div>
+            </div>
+        </section>
+
+        <!-- 2. Architecture & Engineering Chapter -->
+        <section class="service-chapter">
+            <h3 class="chapter-title">Architecture & Engineering Design</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="plan1.jpg"></div>
+                <div class="gallery-item"><img src="plan2.jpg"></div>
+                <div class="gallery-item"><img src="plan3.jpg"></div>
+                <div class="gallery-item"><img src="plan4.jpg"></div>
+            </div>
+        </section>
+
+        <!-- 3. Electrical & Mechanical Chapter -->
+        <section class="service-chapter">
+            <h3 class="chapter-title">Electrical & Mechanical Works</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="elec1.jpg"></div>
+                <div class="gallery-item"><img src="elec2.jpg"></div>
+                <div class="gallery-item"><img src="elec3.jpg"></div>
+                <div class="gallery-item"><img src="elec4.jpg"></div>
+            </div>
+        </section>
+
+    </div>
+
 </body>
+
 </html>

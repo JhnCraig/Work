@@ -47,6 +47,28 @@
             text-align: center;
         }
 
+        /* Custom ratio para sa cinematic wide look */
+        .cinematic-ratio {
+            aspect-ratio: 21 / 5;
+            /* Baguhin ang 9 kung gusto mo pang paliitin (e.g., 21 / 7) */
+            width: 100%;
+        }
+
+        /* Optional: Kung gusto mong siguraduhing malapad talaga */
+        .video-wrapper {
+            max-width: 2000px;
+            /* Adjust mo kung gaano kalapad gusto mo */
+            margin: 0 auto;
+        }
+
+        /* Siguraduhin na ang ratio ay responsive */
+        .ratio {
+            max-width: 900px;
+            /* Dito mo pwedeng i-stretch ang max width */
+            margin: 0 auto;
+            /* Para laging nasa gitna */
+        }
+
         .contact-section {
             padding: 50px 0;
             background-color: #f8f9fa;
@@ -98,13 +120,13 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg  shadow-lg">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">SBDC</a>
             <div class="navbar-nav ms-auto flex-row gap-4">
                 <a class="nav-link" href="#">HOME</a>
                 <a class="nav-link" href="about.html">ABOUT US</a>
-                <a class="nav-link" href="services.html">SERVICES</a>
+                <a class="nav-link" href="service.html">SERVICES</a>
                 <a class="nav-link" href="contact.html">CONTACT</a>
             </div>
         </div>
@@ -245,12 +267,15 @@
         </div>
     </section>
 
-    <!-- Video -->
+    <!-- Video Section -->
     <section class="container my-5">
-        <div class="video-container">
-            <h3>SBDC Introduction Video</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/DzzwhZR3Nk0"
-                title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <div class="video-wrapper">
+            <h3 class="text-center mb-4">SBDC Introduction Video</h3>
+            <div class="cinematic-ratio shadow-lg rounded-3 overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/DzzwhZR3Nk0" title="YouTube video player" allowfullscreen
+                    style="width: 100%; height: 100%;">
+                </iframe>
+            </div>
         </div>
     </section>
 
