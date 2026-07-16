@@ -115,6 +115,77 @@
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
+
+        /* Hover effect para sa nav-link */
+        .navbar .nav-link {
+            position: relative;
+            padding-bottom: 5px;
+            /* Adjust spacing */
+        }
+
+        .navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            /* Susundin nito ang kulay ng text */
+            transition: width 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .navbar .nav-link:hover::after {
+            width: 100%;
+            /* Magiging 100% ang haba ng guhit pag hino-hover */
+        }
+
+        /* ==========================================
+   FOOTER
+========================================== */
+
+        .footer {
+            background: #001c38;
+            color: #ddd;
+            padding: 70px 0 25px;
+        }
+
+        .footer h4,
+        .footer h5 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            color: #cfcfcf;
+            line-height: 1.8;
+        }
+
+        .footer ul {
+            padding: 0;
+        }
+
+        .footer ul li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: #cfcfcf;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .footer ul li a:hover {
+            color: #D4AF37;
+            padding-left: 5px;
+        }
+
+        .footer hr {
+            margin: 40px 0 20px;
+            border-color: rgba(255, 255, 255, .15);
+        }
     </style>
 </head>
 
@@ -270,7 +341,6 @@
     <!-- Video Section -->
     <section class="container my-5">
         <div class="video-wrapper">
-            <h3 class="text-center mb-4">SBDC Introduction Video</h3>
             <div class="cinematic-ratio shadow-lg rounded-3 overflow-hidden">
                 <!-- Dinagdagan ng ?autoplay=1&mute=1 -->
                 <iframe src="https://www.youtube.com/embed/DzzwhZR3Nk0?autoplay=1&mute=1&loop=1&playlist=DzzwhZR3Nk0"
@@ -290,6 +360,39 @@
             <p><strong>Email:</strong> sbdc.information@gmail.com</p>
         </div>
     </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-3">
+
+                    <h5>Contact</h5>
+
+                    <p>(0917) 118 8153</p>
+
+                    <p>sbdc.information@gmail.com</p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+
+                © 2026 Sorgen Builders and Development Corp.
+                All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
 
     <script>
         window.addEventListener('scroll', function () {
