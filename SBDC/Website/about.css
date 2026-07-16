@@ -572,48 +572,6 @@ section {
 
 }
 
-/* ==========================================
-   LEADERSHIP TEAM
-========================================== */
-
-.team-section {
-    background: #f8f9fb;
-}
-
-.team-card {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
-    transition: .35s;
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, .15);
-}
-
-.team-card img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-}
-
-.team-info {
-    padding: 25px;
-    text-align: center;
-}
-
-.team-info h5 {
-    color: #002850;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.team-info span {
-    color: #777;
-    font-size: 15px;
-}
 
 /* ==========================================
    COMPANY STATS
