@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Console - Cat Cafe Lounge</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-pink: #beb6f8;
+            --brand-dark: #1a1a22;
+            --brand-muted: #5c5250;
+            --brand-light: #fdfbf9;
+            --brand-surface: #ffffff;
+            --card-shadow: 0 8px 24px rgba(34, 28, 26, 0.03);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--brand-light);
+            color: var(--brand-muted);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .sidebar-brand {
+            font-family: 'Playfair Display', serif;
+            color: var(--brand-dark);
+        }
+
+        /* Unique Modular Sidebar Wrapper */
+        .admin-sidebar {
+            background-color: var(--brand-dark);
+            min-height: 100vh;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2rem 1.5rem;
+        }
+
+        .sidebar-brand {
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-admin .nav-link {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            margin-bottom: 6px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-admin .nav-link i {
+            font-size: 1.1rem;
+            margin-right: 12px;
+        }
+
+        .nav-admin .nav-link:hover,
+        .nav-admin .nav-link.active {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .nav-admin .nav-link.active i {
+            color: var(--brand-pink);
+        }
+
+        /* Main Workspace Control Desk */
+        .workspace-panel {
+            padding: 2.5rem;
+        }
+
+        /* Minimal Executive Dashboard Cards */
+        .stat-card {
+            background: var(--brand-surface);
+            border: 1px solid rgba(34, 28, 26, 0.04);
+            border-radius: 16px;
+            padding: 1.75rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--brand-dark);
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #a09592;
+        }
+
+        /* Elevated Custom Table Design */
+        .custom-panel-card {
+            background: var(--brand-surface);
+            border: 1px solid rgba(34, 28, 26, 0.04);
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+        }
+
+        .panel-header {
+            padding: 1.5rem 2rem;
+            background: #ffffff;
+            border-bottom: 1px solid rgba(34, 28, 26, 0.05);
+        }
+
+        .table-premium {
+            margin-bottom: 0;
+        }
+
+        .table-premium th {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            background-color: #fbf9f6;
+            color: var(--brand-dark);
+            padding: 14px 24px;
+            border-bottom: 1px solid rgba(34, 28, 26, 0.05);
+        }
+
+        .table-premium td {
+            padding: 16px 24px;
+            vertical-align: middle;
+            font-size: 0.9rem;
+            color: var(--brand-muted);
+            border-bottom: 1px solid rgba(34, 28, 26, 0.03);
+        }
+
+        /* Status and Management Tags */
+        .badge-admin-status {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+        .status-active {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .status-pending {
+            background-color: #fff8e1;
+            color: #f57f17;
+        }
+
+        /* Premium Minimalist Button Styles */
+        .btn-brand-action {
+            background-color: var(--brand-dark);
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(34, 28, 26, 0.12);
+            transition: opacity 0.2s ease;
+        }
+
+        .btn-brand-action:hover {
+            color: #1a1a22;
+            opacity: 0.9;
+            outline: 1px solid #1a1a22;
+        }
+
+        .btn-outline-subtle {
+            border: 1px solid rgba(34, 28, 26, 0.12);
+            color: var(--brand-dark);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-outline-subtle:hover {
+            background-color: var(--brand-dark);
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="row g-0 shadow">
+
+            <!-- SIDEBAR PANEL SECTION -->
+            <div class="col-10 col-md-3 col-xl-2 admin-sidebar d-flex flex-column" style="height: 60rem;">
+                <img src="img/Logo.svg" class="card-svg mt-3 mb-5" style="width: 100%; height: auto;" alt="SBDC logo">
+
+                <ul class="nav flex-column nav-admin flex-grow-1">
+                    <li><a href="index.html" class="nav-link mt-5"><i class="bi bi-sliders"></i> Overview</a></li>
+                    <li><a href="accounting.html" class="nav-link"><i class="bi bi-receipt"></i> Accounting</a></li>
+                    <li><a href="sales.html" class="nav-link"><i class="bi bi-graph-up"></i> Sales</a></li>
+                    <li><a href="marketing.html" class="nav-link "><i class="bi bi-bar-chart"></i> Marketing</a></li>
+                    <li><a href="engineering.html" class="nav-link"><i class="bi bi-cpu"></i> Engineering</a></li>
+                    <li><a href="users.html" class="nav-link active"><i class="bi bi-people"></i> User's Management</a></li>
+                </ul>
+
+                <div class="pt-3 border-top border-secondary border-opacity-20">
+                    <a href="" class="nav-link ms-2 text-white-50 small text-decoration-none d-flex align-items-center">
+                        Log Out <i class="bi bi-arrow-right-circle ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- MAIN WORKSPACE DESK AREA -->
+            <div class="col-12 col-md-9 col-xl-10 workspace-panel">
+
+                <!-- System Area Greeting Header -->
+                <div class="d-flex justify-content-between align-items-center mb-5">
+                    <div>
+                        <h1 class="h3 fw-bold mb-1">Users Management</h1>
+                        <p class="text-muted small mb-0">Manage your user accounts and permissions</p>
+                    </div>
+                    <div class="d-flex gap-2 ms-auto">
+                        <button id="newBtn" class="btn btn-brand-action" type="button" data-bs-toggle="modal"
+                            data-bs-target="#newEntryModal"><i class="bi bi-plus-lg me-1"></i> New Entry</button>
+                        <button id="uploadBtn" class="btn btn-brand-action" type="button"><i class="bi bi-plus-lg me-1"></i> Import File</button>
+                        <input id="fileInput" type="file" style="display:none;" />
+                    </div>
+                </div>
+
+                <!-- New Entry Modal -->
+                <div class="modal fade" id="newEntryModal" tabindex="-1" aria-labelledby="newEntryModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="newEntryModalLabel">New Entry</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="height: 25rem;">
+                                <div class="row g-6">
+                                    <div class="col-2 col-md-6">
+                                        <label class="form-label">Date</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label">Customer Name</label>
+                                        <input type="text" class="form-control" placeholder="Customer Name">
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Product</label>
+                                        <input type="text" class="form-control" placeholder="Product">
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Amount</label>
+                                        <input type="number" class="form-control" placeholder="Amount">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-subtle" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-brand-action">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Import File Modal -->  
+                <div class="modal fade" id="importFileModal" tabindex="-1" aria-labelledby="importFileModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="importFileModalLabel">Import File</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Selected file</label>
+                                    <div id="selectedFileName" class="form-control">No file chosen</div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-subtle" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-brand-action">Import</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY INVENTORY TRACKER & DATA MATRIX -->
+                <div class="table-responsive shadow rounded-4">
+                    <table class="table table-premium align-middle">
+                        <thead>
+                            <tr>
+                                <th>Date Received</th>
+                                <th>Client's Name/Company</th>
+                                <th>Projects Name</th>
+                                <th>Source</th>
+                                <th>Project Value</th>
+                                <th>Project Type</th>
+                                <th>Deadline of Submission</th>
+                                <th>Days of Deadlines</th>
+                                <th>Status</th>
+                                <th>Date Submitted</th>
+                                <th>Response Time(Days)</th>
+                                <th>Follow-up Date</th>
+                                <th>Days to Follow-up</th>
+                                <th>File</th>
+                                <th>Lost Reason</th>
+                                <th>Action:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-semibold text-dark"><i class="bi bi-grid-3x3-gap text-muted me-2"></i>
+                                    Pastry</td>
+                                <td>Chocolate Fudge Brownie · 18 units</td>
+                                <td>18 units</td>
+                                <td><span class="badge badge-admin-status bg-secondary">Viber</span></td>
+                                <td>18 units</td>
+                                <td>18 units</td>
+                                <td>18 units</td>
+                                <td>18 units</td>
+                                <td><span class="badge badge-admin-status status-active">Active</span></td>
+                                <td>18 units</td>
+                                <td>18 units</td>
+                                <td>18 units</td>
+                                <td>18 units</td>
+                                <td>18 units</td>
+                                <td>18 units</td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-outline-subtle" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#menuModal">Edit</button>
+                                        <button class="btn btn-outline-subtle" type="button">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="post">
+                    <input type="hidden" name="action" id="menuAction" value="create">
+                    <input type="hidden" name="id" id="menuId" value="">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="menuModalLabel">Add / Edit Menu Item</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Category</label>
+                            <input type="text" class="form-control" name="category" id="menuCategory"
+                                placeholder="Brownies" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Item Name</label>
+                            <input type="text" class="form-control" name="name" id="menuName"
+                                placeholder="Chocolate Fudge Brownie" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Inventory</label>
+                            <input type="number" min="0" class="form-control" name="inventory" id="menuInventory"
+                                value="0" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select class="form-select" name="status" id="menuStatus">
+                                <option value="Active">Active</option>
+                                <option value="Pending">Pending</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Notes</label>
+                            <textarea class="form-control" name="notes" id="menuNotes" rows="3"
+                                placeholder="Optional notes for this menu item"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-subtle" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-brand-action">Save Item</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const uploadBtn = document.getElementById("uploadBtn");
+        const fileInput = document.getElementById("fileInput");
+        const selectedFileName = document.getElementById("selectedFileName");
+
+        if (uploadBtn && fileInput) {
+            uploadBtn.addEventListener("click", () => fileInput.click());
+        }
+
+        if (fileInput) {
+            fileInput.addEventListener("change", (event) => {
+                const file = event.target.files && event.target.files[0];
+                if (selectedFileName) {
+                    selectedFileName.textContent = file ? file.name : "No file chosen";
+                }
+
+                const importModal = new bootstrap.Modal(document.getElementById("importFileModal"));
+                importModal.show();
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
