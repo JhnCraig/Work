@@ -35,13 +35,11 @@ body {
     transition: all 0.4s ease;
 }
 
-/* Kapag lumampas na sa Hero: Navy Blue text */
 .navbar.scrolled .nav-link,
 .navbar.scrolled .navbar-brand {
     color: #002850 !important;
 }
 
-/* Siguraduhin na laging may glass effect */
 .navbar {
     position: fixed;
     top: 0;
@@ -53,11 +51,9 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Hover effect para sa nav-link */
 .navbar .nav-link {
     position: relative;
     padding-bottom: 5px;
-    /* Adjust spacing */
 }
 
 .navbar .nav-link::after {
@@ -68,14 +64,11 @@ body {
     bottom: 0;
     left: 0;
     background-color: currentColor;
-    /* Susundin nito ang kulay ng text */
     transition: width 0.3s ease;
-    /* Smooth transition */
 }
 
 .navbar .nav-link:hover::after {
     width: 100%;
-    /* Magiging 100% ang haba ng guhit pag hino-hover */
 }
 
 /* ===============================
@@ -106,14 +99,10 @@ body {
 }
 
 .hero-overlay {
-
     position: absolute;
-
     inset: 0;
-
     background: linear-gradient(rgba(0, 0, 0, .25),
             rgba(0, 0, 0, .35));
-
 }
 
 .hero-content p {
@@ -123,65 +112,39 @@ body {
 }
 
 .hero-subtitle {
-
     color: #D4AF37;
-
     letter-spacing: 3px;
-
     font-size: 14px;
-
     text-transform: uppercase;
-
 }
 
 .hero-content h1 {
-
     font-size: 62px;
-
     font-weight: 800;
-
     margin: 20px 0;
-
     line-height: 1.15;
-
 }
 
 .hero-content p {
-
     max-width: 650px;
-
     font-size: 18px;
-
     line-height: 1.8;
-
     margin-bottom: 35px;
-
 }
 
 .btn-warning {
-
     background: #D4AF37;
-
     border: none;
-
     color: #002850;
-
     font-weight: 600;
-
     border-radius: 50px;
-
     padding: 14px 35px;
-
     transition: .3s;
-
 }
 
 .btn-warning:hover {
-
     transform: translateY(-5px);
-
     background: #c79a16;
-
 }
 
 /* ===============================
@@ -189,29 +152,18 @@ body {
 ================================ */
 
 .section-tag {
-
     color: #D4AF37;
-
     text-transform: uppercase;
-
     font-weight: 700;
-
     letter-spacing: 2px;
-
     font-size: 14px;
-
 }
 
 .section-title {
-
     color: #002850;
-
     font-size: 42px;
-
     font-weight: 700;
-
     margin: 12px 0 25px;
-
 }
 
 /* ===============================
@@ -219,65 +171,41 @@ body {
 ================================ */
 
 .mini-card {
-
     background: #fff;
-
     border-radius: 18px;
-
     text-align: center;
-
     padding: 22px;
-
     box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-
     transition: .35s;
-
     height: 100%;
-
 }
 
 .mini-card:hover {
-
     transform: translateY(-8px);
-
     box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
-
 }
 
 .mini-card i {
-
     font-size: 35px;
-
     color: #002850;
-
     margin-bottom: 15px;
-
 }
 
 .mini-card h6 {
-
     font-weight: 600;
-
     margin: 0;
-
 }
 
 img {
-
     transition: .4s;
-
 }
 
 img:hover {
-
     transform: scale(1.02);
-
 }
 
 section {
-
     padding: 90px 0;
-
 }
 
 /* ==========================================
@@ -363,213 +291,130 @@ section {
 }
 
 .mv-card {
-
     background: #fff;
-
     border-radius: 25px;
-
     padding: 45px;
-
     text-align: center;
-
     box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
-
     transition: .35s;
-
     height: 100%;
-
 }
 
 .mv-card:hover {
-
     transform: translateY(-12px);
-
 }
 
 .mv-icon {
-
     width: 90px;
-
     height: 90px;
-
     border-radius: 50%;
-
     background: #002850;
-
     color: #fff;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     margin: auto;
-
     font-size: 40px;
-
     margin-bottom: 25px;
-
     transition: .35s;
-
 }
 
 .mv-card:hover .mv-icon {
-
     background: #D4AF37;
-
     transform: rotate(10deg);
-
 }
 
 .mv-card h3 {
-
     color: #002850;
-
     font-weight: 700;
-
     margin-bottom: 20px;
-
 }
 
 .mv-card p {
-
     color: #666;
-
     line-height: 1.9;
-
 }
 
 /* ==========================================
-   S.O.R.G.E.N
+   S.O.R.G.E.N Priciples
 ========================================== */
 
 .sorgen-section {
-
     background: #fff;
-
 }
 
 .sorgen-card {
-
     background: #ffffff;
-
     border-radius: 22px;
-
     padding: 35px;
-
     text-align: center;
-
     height: 100%;
-
     position: relative;
-
     overflow: hidden;
-
     transition: .35s;
-
     box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
-
 }
 
 .sorgen-card:hover {
-
     transform: translateY(-12px);
-
     box-shadow: 0 25px 45px rgba(0, 0, 0, .15);
-
 }
 
 .letter {
-
     width: 75px;
-
     height: 75px;
-
     border-radius: 50%;
-
     background: #002850;
-
     color: #fff;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     margin: auto;
-
     font-size: 34px;
-
     font-weight: 700;
-
     transition: .35s;
-
 }
 
 .sorgen-card:hover .letter {
-
     background: #D4AF37;
-
     transform: scale(1.1);
-
 }
 
 .icon {
-
     font-size: 38px;
-
     color: #002850;
-
     margin: 25px 0 18px;
-
 }
 
 .sorgen-card h4 {
-
     color: #002850;
-
     font-weight: 700;
-
     margin-bottom: 15px;
-
 }
 
 .sorgen-card p {
-
     color: #666;
-
     line-height: 1.8;
 
 }
 
-/* Gold line animation */
+/* ==============================
+ Gold line animation 
+============================== */
 
 .sorgen-card::before {
-
     content: "";
-
     position: absolute;
-
     top: 0;
-
     left: 0;
-
     width: 0;
-
     height: 5px;
-
     background: #D4AF37;
-
     transition: .4s;
-
 }
 
 .sorgen-card:hover::before {
-
     width: 100%;
-
 }
 
 
@@ -602,7 +447,6 @@ section {
 ========================================== */
 
 .cta-section {
-
     background:
         linear-gradient(rgba(0, 40, 80, .80),
             rgba(0, 40, 80, .80)),
@@ -705,33 +549,23 @@ section {
 @media(max-width:992px) {
 
     .hero-content h1 {
-
         font-size: 48px;
-
     }
 
     .section-title {
-
         font-size: 34px;
-
     }
 
     .timeline::before {
-
         display: none;
-
     }
 
     .timeline-item {
-
         flex-direction: column;
-
     }
 
     .timeline-icon {
-
         margin: auto;
-
     }
 
 }
@@ -739,45 +573,31 @@ section {
 @media(max-width:768px) {
 
     .hero-content {
-
         text-align: center;
-
     }
 
     .hero-content h1 {
-
         font-size: 38px;
-
     }
 
     .hero-content p {
-
         font-size: 16px;
-
     }
 
     .section-title {
-
         font-size: 28px;
-
     }
 
     .mv-card {
-
         padding: 30px;
-
     }
 
     .sorgen-card {
-
         padding: 28px;
-
     }
 
     .cta-section h2 {
-
         font-size: 34px;
-
     }
 
 }
@@ -785,27 +605,19 @@ section {
 @media(max-width:576px) {
 
     .navbar {
-
         padding: 15px;
-
     }
 
     .hero-content h1 {
-
         font-size: 30px;
-
     }
 
     .stat-box h2 {
-
         font-size: 40px;
-
     }
 
     .team-card img {
-
         height: 260px;
-
     }
 
 }
@@ -827,7 +639,6 @@ section {
     filter: brightness(0) invert(1);
 }
 
-/* Change to dark icon after scroll */
 .navbar.scrolled .navbar-toggler-icon {
     filter: none;
 }
@@ -839,8 +650,7 @@ section {
     }
 
     .navbar-collapse {
-        background: rgba(255, 255, 255, .95);
-        backdrop-filter: blur(15px);
+        
         border-radius: 15px;
         margin-top: 15px;
         padding: 15px;
