@@ -809,3 +809,55 @@ section {
     }
 
 }
+
+/* ===========================
+   RESPONSIVE NAVBAR
+=========================== */
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Change to dark icon after scroll */
+.navbar.scrolled .navbar-toggler-icon {
+    filter: none;
+}
+
+@media (max-width:991.98px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-collapse {
+        background: rgba(255, 255, 255, .95);
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
+        margin-top: 15px;
+        padding: 15px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 8px 0;
+    }
+
+    .navbar-nav .nav-link {
+        color: #002850 !important;
+        display: block;
+        padding: 12px;
+    }
+
+}

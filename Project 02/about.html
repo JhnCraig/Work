@@ -21,16 +21,49 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <nav class="navbar navbar-expand-lg  shadow-lg">
+    <nav class="navbar navbar-expand-lg shadow-lg">
+
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">SBDC</a>
-            <div class="navbar-nav ms-auto flex-row gap-4">
-                <a class="nav-link" href="index.html">HOME</a>
-                <a class="nav-link" href="#">ABOUT US</a>
-                <a class="nav-link" href="service.html">SERVICES</a>
-                <a class="nav-link" href="contact.html">CONTACT</a>
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                SBDC
+            </a>
+
+            <!-- Hamburger Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT US</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">SERVICES</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+
+                </ul>
+
             </div>
+
         </div>
+
     </nav>
 
     <!-- ================= HERO ================= -->
@@ -41,7 +74,7 @@
 
         <div class="container hero-content text-center">
 
-            
+
 
             <h1>
 
@@ -107,7 +140,7 @@
 
                     <p>
 
-                           We are aiming to have
+                         We are aiming to have
                         our partnership develop for many years’ experience between us, by achieved with good
                         communication and understanding, and the correct use of contract management tools reporting,
                         progress evaluation, and an imaginative flexible approach to solving problems.
@@ -503,57 +536,59 @@
         </div>
 
 
-    <!-- ================= COMPANY HIGHLIGHTS ================= -->
+        <!-- ================= COMPANY HIGHLIGHTS ================= -->
 
-    <section class="stats-section py-5">
+        <section class="stats-section py-5">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="row text-center">
+                <div class="row text-center">
 
-                <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-6">
 
-                    <div class="stat-box">
+                        <div class="stat-box">
 
-                        <h2>20+</h2>
+                            <h2>20+</h2>
 
-                        <p>Years of Experience</p>
+                            <p>Years of Experience</p>
 
-                    </div>
-
-                </div>
-
-                <div class="col-lg-3 col-6">
-
-                    <div class="stat-box">
-
-                        <h2>250+</h2>
-
-                        <p>Completed Projects</p>
+                        </div>
 
                     </div>
 
-                </div>
+                    <div class="col-lg-3 col-6">
 
-                <div class="col-lg-3 col-6">
+                        <div class="stat-box">
 
-                    <div class="stat-box">
+                            <h2>250+</h2>
 
-                        <h2>100+</h2>
+                            <p>Completed Projects</p>
 
-                        <p>Professional Staff</p>
+                        </div>
 
                     </div>
 
-                </div>
+                    <div class="col-lg-3 col-6">
 
-                <div class="col-lg-3 col-6">
+                        <div class="stat-box">
 
-                    <div class="stat-box">
+                            <h2>100+</h2>
 
-                        <h2>100%</h2>
+                            <p>Professional Staff</p>
 
-                        <p>Client Satisfaction</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+
+                        <div class="stat-box">
+
+                            <h2>100%</h2>
+
+                            <p>Client Satisfaction</p>
+
+                        </div>
 
                     </div>
 
@@ -561,61 +596,59 @@
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- ================= FOOTER ================= -->
 
-    <!-- ================= FOOTER ================= -->
+        <footer class="footer">
 
-    <footer class="footer">
+            <div class="container">
 
-        <div class="container">
+                <div class="row">
 
-            <div class="row">
+                    <div class="col-lg-3">
 
-                <div class="col-lg-3">
+                        <h5>Contact</h5>
 
-                    <h5>Contact</h5>
+                        <p>(0917) 118 8153</p>
 
-                    <p>(0917) 118 8153</p>
+                        <p>sbdc.information@gmail.com</p>
 
-                    <p>sbdc.information@gmail.com</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="text-center">
+
+                    © 2026 Sorgen Builders and Development Corp.
+                    All Rights Reserved.
 
                 </div>
 
             </div>
 
-            <hr>
+        </footer>
 
-            <div class="text-center">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-                © 2026 Sorgen Builders and Development Corp.
-                All Rights Reserved.
+        <script>
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                const heroSection = document.querySelector('.about-hero');
 
-            </div>
+                // Kunin ang distansya ng hero section sa bottom
+                const heroBottom = heroSection.getBoundingClientRect().bottom;
 
-        </div>
-
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            const heroSection = document.querySelector('.about-hero');
-
-            // Kunin ang distansya ng hero section sa bottom
-            const heroBottom = heroSection.getBoundingClientRect().bottom;
-
-            // Kung ang hero section ay wala na sa taas (heroBottom < 80), mag-trigger ng "scrolled"
-            if (heroBottom < 80) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
+                // Kung ang hero section ay wala na sa taas (heroBottom < 80), mag-trigger ng "scrolled"
+                if (heroBottom < 80) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        </script>
 
 </body>
 
