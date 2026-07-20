@@ -417,31 +417,6 @@ section {
     width: 100%;
 }
 
-
-/* ==========================================
-   COMPANY STATS
-========================================== */
-
-.stats-section {
-    background: #002850;
-    color: #fff;
-}
-
-.stat-box {
-    padding: 30px;
-}
-
-.stat-box h2 {
-    font-size: 55px;
-    font-weight: 700;
-    color: #D4AF37;
-}
-
-.stat-box p {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
 /* ==========================================
    CTA
 ========================================== */
