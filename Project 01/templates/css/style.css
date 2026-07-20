@@ -1,0 +1,199 @@
+:root {
+    --brand-pink: #beb6f8;
+    --brand-dark: #1a1a22;
+    --brand-muted: #5c5250;
+    --brand-light: #fdfbf9;
+    --brand-surface: #ffffff;
+    --card-shadow: 0 8px 24px rgba(34, 28, 26, 0.03);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--brand-light);
+    color: var(--brand-muted);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.sidebar-brand {
+    font-family: 'Playfair Display', serif;
+    color: var(--brand-dark);
+}
+
+/* Unique Modular Sidebar Wrapper */
+.admin-sidebar {
+    background-color: var(--brand-dark);
+    min-height: 100vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem 1.5rem;
+}
+
+.sidebar-brand {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-admin .nav-link {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-admin .nav-link i {
+    font-size: 1.1rem;
+    margin-right: 12px;
+}
+
+.nav-admin .nav-link:hover,
+.nav-admin .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.nav-admin .nav-link.active i {
+    color: var(--brand-pink);
+}
+
+/* Main Workspace Control Desk */
+.workspace-panel {
+    padding: 2.5rem;
+}
+
+/* Minimal Executive Dashboard Cards */
+.stat-card {
+    background: var(--brand-surface);
+    border: 1px solid rgba(34, 28, 26, 0.04);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: var(--card-shadow);
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #a09592;
+}
+
+/* Elevated Custom Table Design */
+.custom-panel-card {
+    background: var(--brand-surface);
+    border: 1px solid rgba(34, 28, 26, 0.04);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+.panel-header {
+    padding: 1.5rem 2rem;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(34, 28, 26, 0.05);
+}
+
+/* =============== 
+            Table 
+        =============== */
+.table-premium {
+    margin-bottom: 0;
+}
+
+.table-premium th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background-color: #fbf9f6;
+    color: var(--brand-dark);
+
+    white-space: nowrap;
+    padding: 5px 50px;
+    border-bottom: 1px solid rgba(34, 28, 26, 0.05);
+}
+
+.table-premium td {
+    padding: 5px 25px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.9rem;
+    white-space: normal;
+    color: var(--brand-muted);
+    border-bottom: 1px solid rgba(34, 28, 26, 0.03);
+}
+
+/* Status and Management Tags */
+.badge-admin-status {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.status-active {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-pending {
+    background-color: #fff8e1;
+    color: #f57f17;
+}
+
+/* Premium Minimalist Button Styles */
+.btn-brand-action {
+    background-color: var(--brand-dark);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(34, 28, 26, 0.12);
+    transition: opacity 0.2s ease;
+}
+
+.btn-brand-action:hover {
+    color: #1a1a22;
+    opacity: 0.9;
+    outline: 1px solid #1a1a22;
+}
+
+.btn-outline-subtle {
+    border: 1px solid rgba(34, 28, 26, 0.12);
+    color: var(--brand-dark);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-subtle:hover {
+    background-color: var(--brand-dark);
+    color: #ffffff;
+}
