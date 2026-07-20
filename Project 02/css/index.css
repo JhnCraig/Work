@@ -255,3 +255,60 @@
     }
 
 }
+
+
+/* ==========================================
+   MOBILE RESPONSIVE FIX
+========================================== */
+@media (max-width: 991.98px) {
+
+    /* General spacing */
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
+/* Services */
+.service-card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.service-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.service-card h5 {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.service-card p {
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .service-img {
+        height: 220px;
+    }
+
+    .service-card {
+        padding: 18px;
+    }
+
+}
