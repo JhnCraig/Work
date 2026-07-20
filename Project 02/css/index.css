@@ -220,3 +220,38 @@
     }
 
 }
+
+.about-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.core-values-section {
+    border-left: 3px solid #000;
+    padding-left: 30px;
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width:991px) {
+
+    .core-values-section {
+        border-left: none;
+        border-top: 2px solid #ddd;
+        margin-top: 40px;
+        padding-top: 30px;
+        padding-left: 0;
+    }
+
+    .about-img {
+        height: 300px;
+    }
+
+}

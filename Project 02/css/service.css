@@ -1,175 +1,65 @@
-/*====================================
-  GOOGLE FONT
-====================================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #f8f9fb;
-    color: #333;
-    overflow-x: hidden;
-}
-
-/*====================================
-  NAVBAR
-====================================*/
-
-.navbar {
-    background: rgba(255, 255, 255, .08);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    padding: 18px 0;
-    transition: .35s;
-}
-
-.navbar.scrolled {
-    background: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-}
-
-.navbar-brand img {
-    height: 55px;
-}
-
-.nav-link {
-    color: #fff !important;
-    margin-left: 20px;
-    font-weight: 600;
-    position: relative;
-    transition: .3s;
-}
-
-.navbar.scrolled .nav-link {
-    color: #002850 !important;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: #D4AF37;
-    transition: .3s;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/*====================================
- HERO
-====================================*/
+/* ===================================
+   SERVICES HERO
+=================================== */
 
 .service-hero {
-
-    min-height: 100vh;
-
-    background:
-        linear-gradient(rgba(0, 40, 80, .75),
-            rgba(0, 40, 80, .75)),
-        url("img/service-banner.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
+    padding: 140px 0 100px;
+    background: linear-gradient(135deg, #002850, #0b4d84);
     color: #fff;
+    overflow: hidden;
 }
 
-.hero-content h5 {
+.hero-subtitle {
+    display: inline-block;
     color: #D4AF37;
-    letter-spacing: 3px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
-.hero-content h1 {
-
-    font-size: 65px;
-
+.hero-title {
+    font-size: 55px;
     font-weight: 800;
-
-    margin: 20px 0;
-
     line-height: 1.2;
-
+    margin-bottom: 25px;
 }
 
-.hero-content p {
-
-    max-width: 700px;
-
-    margin: auto;
-
+.hero-text {
     font-size: 18px;
-
+    color: #e9e9e9;
     line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 550px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 
 }
 
-.btn-warning {
+/* ===================================
+   TITLES
+=================================== */
 
-    background: #D4AF37;
-
-    color: #002850;
-
-    border: none;
-
-    border-radius: 50px;
-
-    padding: 14px 38px;
-
-    margin-top: 35px;
-
-    font-weight: 600;
-
-}
-
-.btn-warning:hover {
-
-    background: #c89d18;
-
-    transform: translateY(-5px);
-
-}
-
-/*====================================
- SECTION TITLE
-====================================*/
-
-.section-tag {
+.section-subtitle {
 
     color: #D4AF37;
-
-    font-size: 14px;
 
     font-weight: 700;
 
@@ -181,516 +71,305 @@ body {
 
 .section-title {
 
+    font-size: 40px;
+
+    font-weight: 800;
+
     color: #002850;
-
-    font-size: 42px;
-
-    font-weight: 700;
 
     margin: 15px 0;
 
 }
 
-/*====================================
- GREEN ENERGY
-====================================*/
+.section-description {
 
-.green-energy {
-
-    background: #fff;
-
-}
-
-.green-energy img {
-
-    border-radius: 20px;
-
-    transition: .4s;
-
-}
-
-.green-energy img:hover {
-
-    transform: scale(1.02);
-
-}
-
-.energy-box {
-
-    background: #fff;
-
-    padding: 20px;
-
-    border-radius: 15px;
-
-    text-align: center;
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-
-    transition: .3s;
-
-    height: 100%;
-
-}
-
-.energy-box:hover {
-
-    transform: translateY(-8px);
-
-}
-
-.energy-box i {
-
-    font-size: 35px;
-
-    color: #D4AF37;
-
-    margin-bottom: 10px;
-
-    display: block;
-
-}
-
-.energy-box h6 {
-
-    margin: 0;
-
-    color: #002850;
-
-    font-weight: 600;
-
-}
-
-/*====================================
-  SERVICE CARDS
-====================================*/
-
-.service-cards {
-    background: #f7f9fc;
-}
-
-.service-card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 40px 30px;
-    text-align: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
-    transition: .35s;
-    height: 100%;
-    border-top: 4px solid transparent;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    border-top: 4px solid #D4AF37;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
-}
-
-.service-card i {
-    font-size: 48px;
-    color: #D4AF37;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    color: #002850;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.service-card p {
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 0;
-}
-
-/*====================================
-  WHAT WE DO
-====================================*/
-
-.what-we-do {
-    background: #fff;
-}
-
-.what-card {
-    background: #fff;
-    border-radius: 18px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-    transition: .35s;
-    height: 100%;
-    border-left: 5px solid #D4AF37;
-}
-
-.what-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
-}
-
-.what-card i {
-    font-size: 42px;
-    color: #D4AF37;
-    margin-bottom: 20px;
-}
-
-.what-card h4 {
-    color: #002850;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.what-card p {
-    color: #666;
-    line-height: 1.8;
-}
-
-/*====================================
-  COMPANY OVERVIEW
-====================================*/
-
-.company-overview {
-    background: #f7f9fc;
-}
-
-.company-overview img {
-    border-radius: 20px;
-    transition: .4s;
-}
-
-.company-overview img:hover {
-    transform: scale(1.02);
-}
-
-.company-overview h3 {
-    color: #D4AF37;
-    font-weight: 700;
-    font-size: 42px;
-}
-
-.company-overview p {
-    color: #666;
-    line-height: 1.8;
-}
-
-/*====================================
-  PROJECT GALLERY
-====================================*/
-
-.project-gallery {
-    background: #fff;
-}
-
-.project-gallery img {
-    width: 100%;
-    border-radius: 18px;
-    transition: .4s;
-    cursor: pointer;
-    object-fit: cover;
-}
-
-.project-gallery img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, .15);
-}
-
-/* Large Image */
-
-.project-gallery .col-lg-6:first-child img {
-    min-height: 520px;
-}
-
-/* Small Images */
-
-.project-gallery .col-6 img {
-    height: 250px;
-}
-
-/*====================================
-  IMAGE SHADOW
-====================================*/
-
-.shadow,
-.shadow-lg {
-    transition: .35s;
-}
-
-.shadow:hover,
-.shadow-lg:hover {
-    box-shadow: 0 25px 50px rgba(0, 0, 0, .18) !important;
-}
-
-/*====================================
-  CONTACT CTA
-====================================*/
-
-.cta-section {
-
-    background:
-        linear-gradient(rgba(0, 40, 80, .88),
-            rgba(0, 40, 80, .88)),
-        url("img/cta-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    padding: 110px 0;
-
-    text-align: center;
-
-}
-
-.cta-section h2 {
-
-    color: #fff;
-
-    font-size: 48px;
-
-    font-weight: 700;
-
-    margin-bottom: 20px;
-
-}
-
-.cta-section p {
-
-    color: #ddd;
-
-    max-width: 700px;
+    max-width: 750px;
 
     margin: auto;
 
-    line-height: 1.8;
-
-    margin-bottom: 35px;
+    color: #666;
 
 }
 
-.cta-section .btn {
+/* ===================================
+   SERVICE CARDS
+=================================== */
 
-    border-radius: 50px;
+.service-card {
 
-    padding: 14px 40px;
+    background: #fff;
 
-    font-weight: 600;
+    border-radius: 20px;
 
-}
+    overflow: hidden;
 
-/*====================================
-  FOOTER
-====================================*/
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
 
-.footer {
+    transition: .4s;
 
-    background: #001B36;
-
-    color: #ddd;
-
-    padding: 70px 0 30px;
+    height: 100%;
 
 }
 
-.footer img {
+.service-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+
+}
+
+.service-image {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+}
+
+.service-content {
+
+    padding: 30px;
+
+    text-align: center;
+
+}
+
+.service-content i {
+
+    font-size: 40px;
+
+    color: #002850;
 
     margin-bottom: 20px;
 
 }
 
-.footer h5 {
+.service-content h4 {
 
-    color: #fff;
+    font-weight: 700;
 
-    margin-bottom: 20px;
-
-    font-weight: 600;
+    margin-bottom: 15px;
 
 }
 
-.footer p {
+.service-content p {
+
+    color: #666;
 
     line-height: 1.8;
 
-    color: #cfcfcf;
-
 }
 
-.footer ul {
+/* ===================================
+   OFFER BOXES
+=================================== */
 
-    padding: 0;
+.offer-box {
 
-}
+    display: flex;
 
-.footer ul li {
+    align-items: center;
 
-    list-style: none;
+    padding: 18px 22px;
 
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 
-}
+    background: #fff;
 
-.footer ul li a {
+    border-radius: 15px;
 
-    color: #ddd;
-
-    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
 
     transition: .3s;
 
 }
 
-.footer ul li a:hover {
+.offer-box:hover {
+
+    transform: translateX(10px);
+
+    background: #002850;
+
+    color: #fff;
+
+}
+
+.offer-box i {
 
     color: #D4AF37;
 
-    padding-left: 8px;
+    font-size: 22px;
+
+    margin-right: 15px;
 
 }
 
-.footer hr {
+/* ===================================
+   COMPANY
+=================================== */
 
-    border-color: rgba(255, 255, 255, .12);
+.company-img {
 
-    margin: 35px 0 20px;
+    width: 100%;
 
-}
+    border-radius: 20px;
 
-/*====================================
-  SCROLLBAR
-====================================*/
-
-::-webkit-scrollbar {
-
-    width: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
 
 }
 
-::-webkit-scrollbar-track {
+/* ===================================
+   CATEGORY
+=================================== */
 
-    background: #ececec;
+.category-card {
+
+    background: #f8f9fa;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition: .3s;
 
 }
 
-::-webkit-scrollbar-thumb {
+.category-card:hover {
+
+    background: #002850;
+
+    color: #fff;
+
+    transform: translateY(-8px);
+
+}
+
+.category-card i {
+
+    font-size: 45px;
+
+    color: #D4AF37;
+
+    margin-bottom: 20px;
+
+}
+
+/* ===================================
+   GALLERY
+=================================== */
+
+.gallery-section {
+
+    padding: 80px 0;
+
+}
+
+.gallery-card {
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+
+}
+
+.gallery-img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    transition: .5s;
+
+}
+
+.gallery-card:hover .gallery-img {
+
+    transform: scale(1.1);
+
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+.btn-warning {
 
     background: #D4AF37;
 
-    border-radius: 30px;
+    border: none;
+
+    padding: 14px 35px;
+
+    font-weight: 700;
+
+    border-radius: 50px;
 
 }
 
-/*====================================
-  GENERAL SECTION SPACING
-====================================*/
+.btn-warning:hover {
 
-section {
-
-    padding: 90px 0;
+    background: #b99222;
 
 }
 
-/*====================================
-  RESPONSIVE
-====================================*/
+/* ===================================
+   MOBILE
+=================================== */
 
-@media (max-width:992px) {
+@media(max-width:991px) {
 
-    .hero-content h1 {
+    .hero-title {
 
-        font-size: 48px;
-
-    }
-
-    .section-title {
-
-        font-size: 34px;
+        font-size: 40px;
 
     }
 
-    .project-gallery .col-lg-6:first-child img {
+    .hero-img {
 
-        min-height: auto;
-
-    }
-
-}
-
-@media (max-width:768px) {
-
-    .hero-content h1 {
-
-        font-size: 38px;
+        margin-top: 40px;
 
     }
 
-    .hero-content p {
+    .service-image {
 
-        font-size: 16px;
-
-    }
-
-    .section-title {
-
-        font-size: 30px;
+        height: 220px;
 
     }
 
-    .service-card {
-
-        padding: 30px 25px;
-
-    }
-
-    .what-card {
-
-        padding: 25px;
-
-    }
-
-    .project-gallery .col-6 img {
+    .gallery-img {
 
         height: 180px;
 
     }
 
-    .cta-section h2 {
+}
+
+@media(max-width:768px) {
+
+    .hero-title {
 
         font-size: 32px;
 
     }
 
-}
-
-@media (max-width:576px) {
-
-    .hero-content h1 {
+    .section-title {
 
         font-size: 30px;
 
     }
 
-    .hero-content p {
+    .offer-box {
 
-        width: 100%;
-
-    }
-
-    .section-title {
-
-        font-size: 26px;
-
-    }
-
-    .btn-warning {
-
-        width: 100%;
-
-    }
-
-    .nav-link {
-
-        margin-left: 0;
-
-        margin-top: 10px;
+        font-size: 15px;
 
     }
 
