@@ -4,616 +4,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Sorgen Builders and Development Corp.</title>
-
+    <title>SBDC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
 
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
-    <!-- COPY YOUR EXACT NAVBAR FROM index.html HERE -->
-    <!-- Do not change it so it matches your Home and About pages -->
-
-
-    <!-- ================= HERO ================= -->
-
-    <section class="service-hero">
+    <nav class="navbar navbar-expand-lg shadow-lg">
 
         <div class="container">
 
-            <div class="row align-items-center">
+            <a href="index.html" class="navbar-brand d-flex align-items-center mb-0">
+                <img src="img/Logo.svg" style="width:50px; height:auto;" class="me-2" alt="Logo">
+                <span class="fw-bold">SBDC</span>
+            </a>
 
-                <div class="col-lg-6">
+            <!-- Hamburger Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                    <span class="hero-subtitle">
-                        SORGEN BUILDERS & DEVELOPMENT CORP.
-                    </span>
+                <span class="navbar-toggler-icon"></span>
 
-                    <h1 class="hero-title">
+            </button>
 
-                        Engineering Solutions
-                        Built With Quality,
-                        Precision &
-                        Innovation.
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
 
-                    </h1>
+                <ul class="navbar-nav ms-auto">
 
-                    <p class="hero-text">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
 
-                        We provide complete engineering,
-                        construction, project management,
-                        architectural design and
-                        electro-mechanical solutions
-                        tailored for residential,
-                        commercial and industrial projects.
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT US</a>
+                    </li>
 
-                    </p>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">SERVICES</a>
+                    </li>
 
-                    <a href="contact.html" class="btn btn-warning btn-lg">
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
 
-                        Request a Quote
-
-                    </a>
-
-                </div>
-
-                <div class="col-lg-6 text-center">
-
-                    <img src="img/about(ex).jpg" class="img-fluid hero-img">
-
-                </div>
+                </ul>
 
             </div>
 
         </div>
 
-    </section>
+    </nav>
 
+    <!-- Hero Section -->
+    <header class="hero-section"
+        style="background: linear-gradient(rgba(0, 40, 80, 0.7), rgba(0, 40, 80, 0.7)), url('img/pex.jpg');">
+        <div class="container">
+        </div>
+    </header>
 
-    <!-- ================= SERVICES ================= -->
-
-    <section class="services py-5">
-
+    <section class="service-overview py-5">
         <div class="container">
 
-            <div class="text-center mb-5">
-
-                <h2 class="section-title">
-
-                    Our Professional Services
-
-                </h2>
-
-                <p>
-
-                    Delivering reliable engineering
-                    and construction solutions
-                    from planning to completion.
-
-                </p>
-
-            </div>
-
-
-            <div class="row g-4">
-
+            <div class="row justify-content-center text-center g-5">
 
                 <!-- Card 1 -->
-
-                <div class="col-lg-4">
-
+                <div class="col-lg-4 col-md-6">
                     <div class="service-card">
 
-                        <img src="img/design.jpg" class="service-image">
+                        <img src="img/ex.jpg" width="100%">
+                        <h4>Architectural &<br>Engineering Design</h4>
 
-                        <div class="service-content">
-
-                            <i class="fa-solid fa-compass-drafting"></i>
-
-                            <h4>
-
-                                Architectural &
-                                Engineering Design
-
-                            </h4>
-
-                            <p>
-
-                                Professional planning,
-                                structural analysis,
-                                architectural concepts,
-                                and engineering design
-                                for modern developments.
-
-                            </p>
-
-                        </div>
+                        <p>
+                            Our architectural and engineering design services
+                            combine creativity with technical expertise to
+                            produce high-quality plans for residential,
+                            commercial, and industrial developments.
+                        </p>
 
                     </div>
-
                 </div>
-
 
                 <!-- Card 2 -->
-
-                <div class="col-lg-4">
-
+                <div class="col-lg-4 col-md-6">
                     <div class="service-card">
 
-                        <img src="img/construction.jpg" class="service-image">
+                        <img src="img/cons.jpg" class="service-img" alt="Construction">
 
-                        <div class="service-content">
+                        <h4>General<br>Construction</h4>
 
-                            <i class="fa-solid fa-building"></i>
-
-                            <h4>
-
-                                General Construction
-
-                            </h4>
-
-                            <p>
-
-                                Residential,
-                                commercial,
-                                industrial construction,
-                                renovations,
-                                fit-out works,
-                                and structural development.
-
-                            </p>
-
-                        </div>
+                        <p>
+                            Building and House Construction,
+                            Fit-out Works, Demolition,
+                            Renovation, and Civil Works.
+                        </p>
 
                     </div>
-
                 </div>
-
 
                 <!-- Card 3 -->
-
-                <div class="col-lg-4">
-
+                <div class="col-lg-4 col-md-6">
                     <div class="service-card">
 
-                        <img src="img/electrical.jpg" class="service-image">
+                        <img src="img/aed.jpg" class="service-img" alt="Electro Mechanical">
 
-                        <div class="service-content">
+                        <h4>Electro - Mechanical<br>Works</h4>
 
-                            <i class="fa-solid fa-bolt"></i>
-
-                            <h4>
-
-                                Electro-Mechanical Works
-
-                            </h4>
-
-                            <p>
-
-                                Solar energy,
-                                electrical installation,
-                                HVAC,
-                                PLC programming,
-                                ventilation
-                                and equipment installation.
-
-                            </p>
-
-                        </div>
+                        <p>
+                            Solar Power, Building Wiring,
+                            Equipment Installation,
+                            Air-conditioning System,
+                            Ventilation, PLC Programming,
+                            and other electrical services.
+                        </p>
 
                     </div>
-
                 </div>
 
             </div>
 
-        </div>
+            <div class="bottom-line mt-5"></div>
 
+        </div>
     </section>
 
-    <!-- ================= WE OFFER ================= -->
+    <!-- ================= We Offer ================= -->
 
-    <section class="offer-section py-5">
-
+    <section class="offer-section">
         <div class="container">
 
-            <div class="text-center mb-5">
-
-                <span class="section-subtitle">
-                    WHAT WE DO
-                </span>
-
-                <h2 class="section-title">
-                    We Offer The Following
-                </h2>
-
-                <p class="section-description">
-                    Sorgen Builders & Development Corp. provides comprehensive engineering,
-                    construction, and project management solutions with quality,
-                    safety, and innovation at the center of every project.
-                </p>
-
-            </div>
-
-            <div class="row gy-4">
-
-                <!-- Left Column -->
-                <div class="col-lg-6">
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Architectural Design</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Structural Design</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Electrical Design</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Mechanical Design</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Plumbing Design</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Cost Estimates</span>
-
-                    </div>
-
-                </div>
-
-                <!-- Right Column -->
-
-                <div class="col-lg-6">
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>General Construction</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Construction Management</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Solar Power Installation</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Building Wiring System</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Air Conditioning Installation</span>
-
-                    </div>
-
-                    <div class="offer-box">
-
-                        <i class="fas fa-check-circle"></i>
-                        <span>Project Management</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= COMPANY PROFILE ================= -->
-
-    <section class="company-section py-5">
-
-        <div class="container">
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-6">
-
-                    <img src="img/company.jpg" class="img-fluid company-img" alt="Company">
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <span class="section-subtitle">
-                        COMPANY PROFILE
-                    </span>
-
-                    <h2 class="section-title">
-
-                        Building Strong Foundations
-                        For A Better Tomorrow.
-
-                    </h2>
-
-                    <p>
-
-                        Sorgen Builders & Development Corporation specializes in
-                        engineering, construction, project management,
-                        architectural design, electro-mechanical works,
-                        and complete engineering solutions.
-
-                    </p>
-
-                    <p>
-
-                        Our commitment is to deliver safe,
-                        sustainable,
-                        innovative,
-                        and high-quality infrastructure that exceeds
-                        client expectations.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= CATEGORY ================= -->
-
-    <section class="category-section py-5">
-
-        <div class="container">
-
-            <div class="row g-4">
-
-                <div class="col-lg-4">
-
-                    <div class="category-card">
-
-                        <i class="fas fa-building"></i>
-
-                        <h5>
-                            General Construction
-                        </h5>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-
-                    <div class="category-card">
-
-                        <i class="fas fa-drafting-compass"></i>
-
-                        <h5>
-
-                            Architectural
-                            Engineering
-                            & Design
-
-                        </h5>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-
-                    <div class="category-card">
-
-                        <i class="fas fa-bolt"></i>
-
-                        <h5>
-
-                            Electro-Mechanical
-                            Works
-
-                        </h5>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= GENERAL CONSTRUCTION ================= -->
-
-    <section class="gallery-section py-5">
-
-        <div class="container">
-
-            <div class="text-center mb-5">
-
-                <span class="section-subtitle">OUR PROJECTS</span>
-
-                <h2 class="section-title">
-                    General Construction
-                </h2>
-
-                <p class="section-description">
-                    Delivering quality residential, commercial, and industrial construction projects.
-                </p>
-
-            </div>
-
-            <div class="row g-4">
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/gc1.jpg" class="gallery-img">
+            <div class="offer-line"></div>
+
+            <h2 class="offer-title text-center mb-5">
+                We offer the following:
+            </h2>
+
+            <div class="row justify-content-center gx-2">
+
+                <div class="col-lg-5 col-md-6">
+                    <div class="offer-list">
+                        <p>🏗️ Architectural & Engineering Design</p>
+                        <p>🏠 Construction & Building Services</p>
+                        <p>⚡ Electrical Installation & Repair</p>
+                        <p>☀️ Solar Panel Installation & Maintenance</p>
+                        <p>🔧 General Repair & Maintenance</p>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/gc2.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/gc3.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/gc4.jpg" class="gallery-img">
+                <div class="col-lg-5 col-md-6">
+                    <div class="offer-list">
+                        <p>🛠️ Renovation & Remodeling</p>
+                        <p>🧱 Structural Works</p>
+                        <p>🚿 Plumbing & Sanitary Services</p>
+                        <p>❄️ Mechanical / HVAC Services</p>
+                        <p>📋 Project Management & Consultation</p>
                     </div>
                 </div>
 
             </div>
 
         </div>
-
     </section>
 
-    <!-- ================= ARCHITECTURAL ================= -->
+    <!-- Photo Gallery Section -->
+    <section class="gallery section">
+        <div class="container text-center">
+            <h1 class="mb-5">PHOTO GALLERY</h1>
 
-    <section class="gallery-section py-5 bg-light">
+            <p class="gallery-description">
+                Discover the quality and craftsmanship behind our completed projects.
+                Our gallery features a wide range of services, including construction,
+                electrical installations, solar energy solutions, repairs, maintenance,
+                and other engineering works. Every project reflects our commitment to
+                delivering safe, reliable, and high-quality results for every client.
+            </p>
 
-        <div class="container">
-
-            <div class="text-center mb-5">
-
-                <span class="section-subtitle">DESIGN SERVICES</span>
-
-                <h2 class="section-title">
-                    Architectural & Engineering Design
-                </h2>
-
-                <p class="section-description">
-                    Creative, functional, and sustainable engineering solutions.
-                </p>
-
+            <div class="gallery-tabs">
+                <div class="col-md-3">
+                    <p>General Construction</p>
+                </div>
+                <div class="col-md-3">
+                    <p>Architectural & Engineering Design</p>
+                </div>
+                <div class="col-md-3">
+                    <p>Electro - Mechanical Works</p>
+                </div>
             </div>
-
-            <div class="row g-4">
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/ar1.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/ar2.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/ar3.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/ar4.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-            </div>
-
         </div>
-
     </section>
+</body>
 
-    <!-- ================= ELECTRO ================= -->
-
-    <section class="gallery-section py-5">
-
-        <div class="container">
-
-            <div class="text-center mb-5">
-
-                <span class="section-subtitle">SPECIALIZED SERVICES</span>
-
-                <h2 class="section-title">
-                    Electro-Mechanical Works
-                </h2>
-
-                <p class="section-description">
-                    Reliable electrical, mechanical, and renewable energy solutions.
-                </p>
-
-            </div>
-
-            <div class="row g-4">
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/em1.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/em2.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/em3.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-card">
-                        <img src="img/em4.jpg" class="gallery-img">
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
+</html>

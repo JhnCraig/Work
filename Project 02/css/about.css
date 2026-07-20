@@ -417,42 +417,6 @@ section {
     width: 100%;
 }
 
-/* ==========================================
-   CTA
-========================================== */
-
-.cta-section {
-    background:
-        linear-gradient(rgba(0, 40, 80, .80),
-            rgba(0, 40, 80, .80)),
-        url("img/cta.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    padding: 120px 0;
-
-    color: #fff;
-
-    position: relative;
-}
-
-.cta-overlay {
-    position: absolute;
-    inset: 0;
-}
-
-.cta-section h2 {
-    font-size: 48px;
-    font-weight: 700;
-}
-
-.cta-section p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.8;
-    margin-bottom: 35px;
-}
 
 /* ==========================================
    FOOTER
