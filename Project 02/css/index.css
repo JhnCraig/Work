@@ -17,11 +17,42 @@
     border-radius: 30px;
 }
 
+/* ==========================
+   SERVICES
+========================== */
+
 .service-card {
     border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
+    overflow: hidden;
     text-align: center;
+    background: #fff;
+    height: 100%;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+}
+
+.service-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card h5 {
+    margin: 25px 20px 15px;
+    font-weight: 700;
+    color: #002850;
+}
+
+.service-card p {
+    padding: 0 20px 25px;
+    line-height: 1.8;
+    margin: 0;
 }
 
 .why-us-section {
