@@ -61,36 +61,137 @@
                 </div>
 
                 <!-- New Entry Modal -->
-                <div class="modal fade" id="newEntryModal" tabindex="-1" aria-labelledby="newEntryModalLabel" aria-hidden="true">
+                <div class="modal fade" id="newEntryModal" tabindex="-1" aria-labelledby="newEntryModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="newEntryModalLabel">New Entry</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
-                            <div class="modal-body" style="height: 25rem;">
-                                <div class="row g-4">
-                                    <div class="col-12 col-md-4 ">
-                                        <label class="form-label">Date</label>
-                                        <input type="date" class="form-control">
+                            <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+
+                                <div class="row g-6 mb-4">
+                                    <label class="form-label fw-bold mb-2">Project Information</label>
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Date Received</label>
+                                        <input type="date" class="form-control mb-3" style="font-size: 14px;">
                                     </div>
-                                    <div class="col-12 col-md-4">
-                                        <label class="form-label">Customer Name</label>
-                                        <input type="text" class="form-control" placeholder="Customer Name">
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Status</label>
+                                        <select id="project_code" class="form-control mb-3" style="font-size: 14px;">
+                                            <option value="">Select Status</option>
+                                            <option value="PC001">Inquiry</option>
+                                            <option value="PC002">Proposal</option>
+                                            <option value="PC003">Contract</option>
+                                            <!-- Add more options as needed -->
+
+                                        </select>
                                     </div>
-                                    <div class="col-12 col-md-4">
-                                        <label class="form-label">Product</label>
-                                        <input type="text" class="form-control" placeholder="Product">
+
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Client's Name / Company</label>
+                                        <input id="client_name" type="text" class="form-control mb-3" style="font-size: 14px;" placeholder="Client's Name / Company">
                                     </div>
-                                    <div class="col-12 col-md-4">
-                                        <label class="form-label">Amount</label>
-                                        <input type="number" class="form-control" placeholder="Amount">
+
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Project Name</label>
+                                        <input id="project_name" type="text" class="form-control mb-3" style="font-size: 14px;"
+                                            placeholder="Project Name">
+                                    </div>
+
+                                    <div class="col-5 col-md-4">
+                                        <label class="form-label" style="font-size: 14px;">Project Type</label>
+                                        <select id="project_code" class="form-control mb-3" style="font-size: 14px;">
+                                            <option value="">Select Project Type</option>
+                                            <option value="PC001">Option 1</option>
+                                            <option value="PC002">Option 2</option>
+                                            <option value="PC003">Option 3</option>
+                                            <!-- Add more options as needed -->
+
+                                        </select>
+                                    </div>
+
+                                    <div class="col-5 col-md-4">
+                                        <label class="form-label" style="font-size: 14px;">Source</label>
+                                        <select id="project_code" class="form-control mb-3" style="font-size: 14px;">
+                                            <option value="">Select Source</option>
+                                            <option value="PC001">Option 1</option>
+                                            <option value="PC002">Option 2</option>
+                                            <option value="PC003">Option 3</option>
+                                            <!-- Add more options as needed -->
+
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-5 col-md-4">
+                                        <label class="form-label" style="font-size: 14px;">Project Value</label>
+                                        <select id="project_code" class="form-control mb-3" style="font-size: 14px;">
+                                            <option value="">Select Value</option>
+                                            <option value="PC001">Option 1</option>
+                                            <option value="PC002">Option 2</option>
+                                            <option value="PC003">Option 3</option>
+                                            <!-- Add more options as needed -->
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-6 mb-4">
+                                    <label class="form-label fw-bold mb-2">Timeline</label>
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Deadline of Submission</label>
+                                        <input type="date" class="form-control mb-3" style="font-size: 14px;">
+                                    </div>
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Days of Deadline</label>
+                                        <input type="text" class="form-control" style="font-size: 14px;" placeholder="Days of Deadline">
+                                    </div>
+                                    
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Date Submitted</label>
+                                        <input type="date" class="form-control mb-3" style="font-size: 14px;">
+                                    </div>
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Response Time (Days)</label>
+                                        <input type="text" class="form-control" style="font-size: 14px;" placeholder="Response Time (Days)">
+                                    </div>
+                                    
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Follow-up Date</label>
+                                        <input type="date" class="form-control mb-3" style="font-size: 14px;">
+                                    </div>
+                                    <div class="col-5 col-md-6">
+                                        <label class="form-label" style="font-size: 14px;">Days to Follow-up</label>
+                                        <input type="text" class="form-control" style="font-size: 14px;" placeholder="Days to Follow-up">
                                     </div>
                                 </div>
+
+                                <div class="row g-6 mb-4">
+                                    <label class="form-label fw-bold mb-2">Documents</label>
+                                    <div class="col-2 col-md-2">
+                                        <button id="uploadBtn" class="btn btn-brand-action mb-3" type="button"><i class="bi bi-upload me-1"></i> Upload File</button>
+                                    </div>
+                                    <div class="col-10">
+                                        <input id="transaction_details" type="text" class="form-control mb-3" style="font-size: 14px;">
+                                    </div>
+                                </div>
+
+                                <div class="row g-6 mb-4">
+                                    <label class="form-label fw-bold mb-2">Additional Information</label>
+                                    <div class="col-12">
+                                        <input id="description" type="text" class="form-control mb-3" style="font-size: 14px;" placeholder="No file chosen"
+                                            placeholder="Lost Reason (Text Area)">
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-subtle" data-bs-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-brand-action">Save</button>
+                                <button type="button" class="btn btn-outline-subtle"
+                                    data-bs-dismiss="modal">Cancel</button>
+                                <button id="saveSalesBtn" type="button" class="btn btn-brand-action">Save</button>
                             </div>
                         </div>
                     </div>

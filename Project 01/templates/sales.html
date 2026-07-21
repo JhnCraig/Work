@@ -76,27 +76,27 @@
                                     <label class="form-label fw-bold mb-2">Sales Information</label>
                                     <div class="col-5 col-md-6">
                                         <label class="form-label" style="font-size: 14px;">Month</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="month" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="Month">
                                     </div>
                                     <div class="col-5 col-md-6">
                                         <label class="form-label" style="font-size: 14px;">Project Code</label>
-                                        <input type="text" class="form-control" style="font-size: 14px;" placeholder="Project Code">
+                                        <input id="project_code" type="text" class="form-control" style="font-size: 14px;" placeholder="Project Code">
                                     </div>
 
                                     <div class="col-5 col-md-6">
                                         <label class="form-label" style="font-size: 14px;">Client Name</label>
-                                        <input type="text" class="form-control" style="font-size: 14px;" placeholder="Client Name">
+                                        <input id="client_name" type="text" class="form-control" style="font-size: 14px;" placeholder="Client Name">
                                     </div>
 
                                     <div class="col-5 col-md-6">
                                         <label class="form-label" style="font-size: 14px;">TIN</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="tin" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="TIN">
                                     </div>
                                     <div class="col-5 col-md-6">
                                         <label class="form-label" style="font-size: 14px;">PO No.</label>
-                                        <input type="text" class="form-control" style="font-size: 14px;" placeholder="PO No.">
+                                        <input id="po_no" type="text" class="form-control" style="font-size: 14px;" placeholder="PO No.">
                                     </div>
 
                                     <div class="col-5 col-md-12">
@@ -122,7 +122,7 @@
                                 <div class="row g-6 mb-4">
                                     <label class="form-label fw-bold mb-2">Transaction Information</label>
                                     <div class="col-12">
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="transaction_details" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="Transaction Details (textarea)">
                                     </div>
                                 </div>
@@ -131,37 +131,37 @@
                                     <label class="form-label fw-bold mb-2">Financial Information</label>
                                     <div class="col-3 col-md-3">
                                         <label class="form-label" style="font-size: 14px;">PO Amount</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="po_amount" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="PO Amount">
                                     </div>
                                     <div class="col-2 col-md-3">
                                         <label class="form-label" style="font-size: 14px;">Inv Amount</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="inv_amount" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="Inv Amount">
                                     </div>
                                     <div class="col-3 col-md-3">
-                                        <label class="form-label" style="font-size: 14px;"></label>VAT</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <label class="form-label" style="font-size: 14px;">VAT</label>
+                                        <input id="vat" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="VAT">
                                     </div>
                                     <div class="col-3 col-md-3">
                                         <label class="form-label" style="font-size: 14px;">Net of VAT</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="net_of_vat" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="Net of VAT">
                                     </div>
                                     <div class="col-3 col-md-3">
                                         <label class="form-label" style="font-size: 14px;">2% WTax</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="wtax_2" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="2% WTax">
                                     </div>
                                     <div class="col-3 col-md-3">
                                         <label class="form-label" style="font-size: 14px;">Net Amount</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="net_amount" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="Net Amount">
                                     </div>
                                     <div class="col-3 col-md-3">
                                         <label class="form-label" style="font-size: 14px;">Cash in Bank</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="cash_in_bank" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="Cash in Bank">
                                     </div>
 
@@ -172,11 +172,11 @@
                                     <label class="form-label fw-bold mb-2">Bank Information</label>
                                     <div class="col-5 col-md-6">
                                         <label class="form-label" style="font-size: 14px;">Date</label>
-                                        <input type="date" class="form-control" style="font-size: 14px;">
+                                        <input id="bank_date" type="date" class="form-control" style="font-size: 14px;">
                                     </div>
                                     <div class="col-5 col-md-6">
                                         <label class="form-label" style="font-size: 14px;">Bank</label>
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="bank" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="Bank">
                                     </div>
 
@@ -185,7 +185,7 @@
                                 <div class="row g-6 mb-4">
                                     <label class="form-label fw-bold mb-2">Additional Information</label>
                                     <div class="col-12">
-                                        <input type="text" class="form-control mb-3" style="font-size: 14px;"
+                                        <input id="description" type="text" class="form-control mb-3" style="font-size: 14px;"
                                             placeholder="Description">
                                     </div>
                                 </div>
@@ -202,7 +202,7 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-subtle"
                                     data-bs-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-brand-action">Save</button>
+                                <button id="saveSalesBtn" type="button" class="btn btn-brand-action">Save</button>
                             </div>
                         </div>
                     </div>
@@ -359,6 +359,56 @@
 
                 const importModal = new bootstrap.Modal(document.getElementById("importFileModal"));
                 importModal.show();
+            });
+        }
+    </script>
+    <script>
+        // Sales modal submission
+        const saveSalesBtn = document.getElementById('saveSalesBtn');
+        if (saveSalesBtn) {
+            saveSalesBtn.addEventListener('click', async () => {
+                const payload = {
+                    month: document.getElementById('month').value,
+                    project_code: document.getElementById('project_code').value,
+                    client_name: document.getElementById('client_name').value,
+                    tin: document.getElementById('tin').value,
+                    po_no: document.getElementById('po_no').value,
+                    address: document.getElementById('address') ? document.getElementById('address').value : '',
+                    si_no: document.getElementById('si_no') ? document.getElementById('si_no').value : '',
+                    si_date: document.getElementById('si_date') ? document.getElementById('si_date').value : '',
+                    transaction_details: document.getElementById('transaction_details').value,
+                    po_amount: document.getElementById('po_amount').value,
+                    inv_amount: document.getElementById('inv_amount').value,
+                    vat: document.getElementById('vat').value,
+                    net_of_vat: document.getElementById('net_of_vat').value,
+                    wtax_2: document.getElementById('wtax_2').value,
+                    net_amount: document.getElementById('net_amount').value,
+                    cash_in_bank: document.getElementById('cash_in_bank').value,
+                    bank_date: document.getElementById('bank_date').value,
+                    bank: document.getElementById('bank').value,
+                    description: document.getElementById('description').value,
+                    remarks: document.getElementById('remarks') ? document.getElementById('remarks').value : '',
+                };
+
+                try {
+                    const res = await fetch('/api/sales', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload),
+                    });
+                    if (res.ok) {
+                        const modalEl = document.getElementById('newEntryModal');
+                        const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+                        modal.hide();
+                        alert('Sales entry saved');
+                        window.location.reload();
+                    } else {
+                        const err = await res.json();
+                        alert('Save failed: ' + (err.error || res.statusText));
+                    }
+                } catch (err) {
+                    alert('Save failed: ' + err.message);
+                }
             });
         }
     </script>
