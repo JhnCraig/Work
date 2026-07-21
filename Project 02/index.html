@@ -159,42 +159,154 @@
 
     </section>
 
-    <!-- Recent Projects Section -->
+    <!-- ===========================
+     RECENT PROJECTS
+=========================== -->
     <section class="container my-5">
-        <h2 class="mb-4">Recent Projects</h2>
+
+        <div class="mb-4">
+            <h2 class="section-title">Recent Projects</h2>
+            <p class="text-muted">
+                Explore some of our completed engineering and construction projects.
+            </p>
+        </div>
+
         <div class="row g-4">
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="img/Ev.jpg" class="img-fluid rounded-img mb-3" alt="Project 1"
-                        style="width: 700px; height: 300px;">
-                    <p><i class="fas fa-map-marker-alt"></i> EV Charging Station, Clark Pampanga</p>
+
+            <!-- Project 1 -->
+            <div class="col-lg-6">
+
+                <div class="project-card" data-bs-toggle="modal" data-bs-target="#project1Modal">
+
+                    <div class="project-image">
+                        <img src="img/ev.jpg" alt="EV Charging Station">
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>EV Charging Station</h4>
+
+                        <p>
+                            Clark, Pampanga
+                        </p>
+
+                    </div>
+
                 </div>
+
             </div>
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="img/solar.jpg" class="img-fluid rounded-img mb-3" alt="Project 2"
-                        style="width: 700px; height: 300px;">
-                    <p><i class="fas fa-map-marker-alt"></i> Solar Power Plant, Nueva Ecija</p>
+
+            <!-- Project 2 -->
+            <div class="col-lg-6">
+
+                <div class="project-card" data-bs-toggle="modal" data-bs-target="#project2Modal">
+
+                    <div class="project-image">
+                        <img src="img/solar.jpg" alt="Solar Plant">
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>Solar Power Plant</h4>
+
+                        <p>
+                            Nueva Ecija
+                        </p>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
-        <div class="cta-box text-center" style="width: 400px; height: 100px;">
-            <h5>HAVE A PROJECT IN MIND?</h5>
-            <p>Let’s Work Together and Build something great.</p>
-        </div>
+
     </section>
 
-    <!-- Services Section -->
+    <div class="modal fade" id="project1Modal" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content project-modal">
+
+                <button type="button" class="btn-close ms-auto m-3" data-bs-dismiss="modal"></button>
+
+                <img src="img/ev.jpg" class="modal-project-img">
+
+                <div class="modal-body">
+
+                    <h4>Project Highlight | EV Charging Station</h4>
+
+                    <p class="text-muted">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Clark, Pampanga
+                    </p>
+
+                    <p>
+                        SBDC successfully completed an Electric Vehicle (EV)
+                        Charging Station project in Clark, Pampanga. The project
+                        supports sustainable transportation by providing reliable
+                        charging facilities while maintaining quality engineering
+                        and construction standards.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="project2Modal" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content project-modal">
+
+                <button type="button" class="btn-close ms-auto m-3" data-bs-dismiss="modal"></button>
+
+                <img src="img/solar.jpg" class="modal-project-img">
+
+                <div class="modal-body">
+
+                    <h4>Project Highlight | Solar Power Plant</h4>
+
+                    <p class="text-muted">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Nueva Ecija
+                    </p>
+
+                    <p>
+                        SBDC participated in the construction and installation
+                        of solar power facilities, providing reliable and
+                        sustainable energy solutions while maintaining high
+                        engineering standards.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================
+     SERVICES
+========================== -->
     <section class="container my-5">
-        <h2 class="mb-4">Services</h2>
+
+        <h2 class="mb-5">Services</h2>
 
         <div class="row g-4">
 
+            <!-- Architectural & Engineering Design -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
+                <div class="service-card h-100">
 
                     <div class="service-image">
-                        <img src="img/archi.jpg" class="service-img" alt="">
+                        <img src="img/archi.jpg" class="service-img" alt="Architectural & Engineering Design">
                     </div>
 
                     <div class="service-content">
@@ -210,66 +322,95 @@
                 </div>
             </div>
 
+            <!-- General Construction -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-card h-100">
 
-                    <img src="img/cons.jpg" class="service-img" alt="General Construction">
+                    <div class="service-image">
+                        <img src="img/cons.jpg" class="service-img" alt="General Construction">
+                    </div>
 
                     <div class="service-content">
                         <h5>General Construction</h5>
 
                         <p>
-                            Building and House Construction, Fit-out works,
-                            Demolition and Renovation.
+                            We provide reliable construction services for residential,
+                            commercial, and industrial projects including fit-out works,
+                            renovation, demolition, and structural construction.
                         </p>
                     </div>
 
                 </div>
             </div>
 
+            <!-- Electro-Mechanical Works -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-card h-100">
 
-                    <img src="img/electro.jpg" class="service-img" alt="Electro-Mechanical Works">
+                    <div class="service-image">
+                        <img src="img/electro.jpg" class="service-img" alt="Electro-Mechanical Works">
+                    </div>
 
                     <div class="service-content">
                         <h5>Electro-Mechanical Works</h5>
 
                         <p>
-                            Solar Power, Building Wiring, Equipment Installation,
-                            Air-conditioning System, Ventilation, PLC Programming
-                            and others.
+                            We provide electrical and mechanical solutions including
+                            solar power systems, building wiring, HVAC installation,
+                            ventilation systems, PLC programming, and preventive maintenance.
                         </p>
                     </div>
 
                 </div>
             </div>
-        </div>
-    </section>
 
+        </div>
+
+    </section>
     <!-- Why Choose Us -->
     <section class="why-us-section">
-        <div class="container text-right">
-            <h2 class="mb-5">WHY CHOOSE US?</h2>
-            <div class="row">
-                <div class="col-md-3"><i class="fas fa-user-tie fa-2x"></i>
-                    <p>Certified Professionals</p>
-                    <p> Experienced and skilled engineers & technicians.</p>
+        <div class="container">
+
+            <div class="row align-items-start">
+
+                <!-- Title -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <h2 class="why-title">WHY CHOOSE US?</h2>
                 </div>
-                <div class="col-md-3"><i class="fas fa-cube fa-2x"></i>
-                    <p>Quality Materials</p>
-                    <p> We use durable, high-quality materials for every project.</p>
-                </div>
-                <div class="col-md-3"><i class="fas fa-shield-alt fa-2x"></i>
-                    <p>Safety First</p>
-                    <p> Strict adherence to safety standards on every job site.</p>
-                </div>
-                <div class="col-md-3"><i class="fas fa-handshake fa-2x"></i>
-                    <p>Reliable Service</p>
-                    <p> Committed to delivering projects on time with exceptional quality.</p>
+
+                <!-- Icons -->
+                <div class="col-lg-9">
+                    <div class="row text-center">
+
+                        <div class="col-6 col-lg-3">
+                            <i class="fas fa-user-tie why-icon"></i>
+                            <h5>Certified Professionals</h5>
+                            <p>Experienced and skilled engineers & technicians.</p>
+                        </div>
+
+                        <div class="col-6 col-lg-3">
+                            <i class="fas fa-cube why-icon"></i>
+                            <h5>Quality Materials</h5>
+                            <p>We use durable, high-quality materials for every project.</p>
+                        </div>
+
+                        <div class="col-6 col-lg-3">
+                            <i class="fas fa-shield-alt why-icon"></i>
+                            <h5>Safety First</h5>
+                            <p>Strict adherence to safety standards on every job site.</p>
+                        </div>
+
+                        <div class="col-6 col-lg-3">
+                            <i class="fas fa-handshake why-icon"></i>
+                            <h5>Reliable Service</h5>
+                            <p>Committed to delivering projects on time with exceptional quality.</p>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
@@ -327,32 +468,55 @@
 
 
     <!-- ================= FOOTER ================= -->
-
     <footer class="footer">
 
         <div class="container">
 
-            <div class="row">
+            <div class="row justify-content-center">
 
-                <div class="col-lg-3">
+                <div class="col-lg-8 text-center">
 
-                    <h5>Contact</h5>
+                    <img src="img/Logo.svg" alt="SBDC Logo" width="75" class="mb-3">
 
-                    <p>(0917) 118 8153</p>
+                    <h4 class="mb-3">
+                        Sorgen Builders and Development Corporation
+                    </h4>
 
-                    <p>sbdc.information@gmail.com</p>
+                    <p class="footer-text">
+                        Delivering trusted engineering, construction, and project
+                        management solutions with quality, integrity, and excellence.
+                    </p>
 
+                    <div class="mt-4">
+
+                        <a href="mailto:sbdc.information@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/SorgenBuildersandDevelopmentCorporation" target="_blank"
+                            class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://sorgenbuilders.com" target="_blank" class="social-icon">
+                            <i class="fas fa-globe"></i>
+                        </a>
+
+                        <a href="https://maps.google.com/?q=Park+Place,+San+Rafael,+Santo+Tomas,+Batangas"
+                            target="_blank" class="social-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </a>
+
+                    </div>
                 </div>
 
             </div>
 
             <hr>
 
-            <div class="text-center">
-
-                © 2026 Sorgen Builders and Development Corp.
+            <div class="text-center copyright">
+                © 2026 Sorgen Builders and Development Corporation.
                 All Rights Reserved.
-
             </div>
 
         </div>
@@ -360,22 +524,21 @@
     </footer>
 
     <script>
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            const heroSection = document.querySelector('.hero-section');
+        const navbar = document.querySelector(".navbar");
+        const hero = document.querySelector(".hero-section");
 
-            // Kunin ang distansya ng hero section sa bottom
-            const heroBottom = heroSection.getBoundingClientRect().bottom;
+        window.addEventListener("scroll", () => {
 
-            // Kung ang hero section ay wala na sa taas (heroBottom < 80), mag-trigger ng "scrolled"
-            if (heroBottom < 80) {
-                navbar.classList.add('scrolled');
+            const heroBottom = hero.offsetTop + hero.offsetHeight - 80;
+
+            if (window.scrollY > heroBottom) {
+                navbar.classList.add("scrolled");
             } else {
-                navbar.classList.remove('scrolled');
+                navbar.classList.remove("scrolled");
             }
+
         });
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
