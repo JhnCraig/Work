@@ -1,376 +1,372 @@
-/* ===================================
-   SERVICES HERO
-=================================== */
+.hero-section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+}
 
-.service-hero {
-    padding: 140px 0 100px;
-    background: linear-gradient(135deg, #002850, #0b4d84);
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+    color: #002850 !important;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar .nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    /* Adjust spacing */
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   CTA
+========================================== */
+
+.cta-section {
+    background:
+        linear-gradient(rgba(0, 40, 80, .80),
+            rgba(0, 40, 80, .80)),
+        url("img/cta.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 120px 0;
+
     color: #fff;
-    overflow: hidden;
+
+    position: relative;
 }
 
-.hero-subtitle {
-    display: inline-block;
-    color: #D4AF37;
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.cta-section h2 {
+    font-size: 48px;
     font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
 }
 
-.hero-title {
-    font-size: 55px;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
-
-.hero-text {
-    font-size: 18px;
-    color: #e9e9e9;
+.cta-section p {
+    max-width: 700px;
+    margin: auto;
     line-height: 1.8;
     margin-bottom: 35px;
 }
 
-.hero-img {
+/* ==============================
+   HAMBURGER MENU
+============================== */
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+    padding: 8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+    filter: none;
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE FIX
+========================================== */
+@media (max-width: 991.98px) {
+
+    /* General spacing */
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
+/* ==============================
+        Mobile Menu
+============================== */
+@media (max-width: 991.98px) {
+
+    .navbar-collapse {
+        color: white;
+        margin-top: 15px;
+        padding: 15px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 8px 0;
+    }
+
+    .navbar-nav .nav-link {
+        color: #002850 !important;
+        display: block;
+        padding: 12px;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+}
+
+.about-img {
     width: 100%;
-    max-width: 550px;
-    animation: float 4s ease-in-out infinite;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 25px;
 }
 
-@keyframes float {
+.core-values-section {
+    border-left: 3px solid #000;
+    padding-left: 30px;
+}
 
-    0% {
-        transform: translateY(0);
+.value-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width:991px) {
+
+    .core-values-section {
+        border-left: none;
+        border-top: 2px solid #ddd;
+        margin-top: 40px;
+        padding-top: 30px;
+        padding-left: 0;
     }
 
-    50% {
-        transform: translateY(-10px);
+    .about-img {
+        height: 300px;
     }
 
-    100% {
-        transform: translateY(0);
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE FIX
+========================================== */
+@media (max-width: 991.98px) {
+
+    /* General spacing */
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-}
-
-/* ===================================
-   TITLES
-=================================== */
-
-.section-subtitle {
-
-    color: #D4AF37;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
 
 }
 
-.section-title {
+/* ==========================
+   SERVICE OVERVIEW
+========================== */
 
-    font-size: 40px;
-
-    font-weight: 800;
-
-    color: #002850;
-
-    margin: 15px 0;
-
+.service-overview {
+    background: #fff;
+    padding: 70px 0;
 }
-
-.section-description {
-
-    max-width: 750px;
-
-    margin: auto;
-
-    color: #666;
-
-}
-
-/* ===================================
-   SERVICE CARDS
-=================================== */
 
 .service-card {
+    text-align: center;
+    max-width: 340px;
+    margin: auto;
+}
 
-    background: #fff;
+.service-img {
+    width: 150px !important;
+    height: 150px !important;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
 
-    border-radius: 20px;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+
+    display: block;
+    margin: 0 auto 20px auto;
 
     overflow: hidden;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-
-    transition: .4s;
-
-    height: 100%;
+    border: 5px solid #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
 
 }
 
-.service-card:hover {
-
-    transform: translateY(-10px);
-
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
-
+.service-card:hover .service-img {
+    transform: scale(1.08);
 }
 
-.service-image {
-
-    width: 100%;
-
-    height: 250px;
-
-    object-fit: cover;
-
-}
-
-.service-content {
-
-    padding: 30px;
-
-    text-align: center;
-
-}
-
-.service-content i {
-
-    font-size: 40px;
-
-    color: #002850;
-
-    margin-bottom: 20px;
-
-}
-
-.service-content h4 {
-
-    font-weight: 700;
-
-    margin-bottom: 15px;
-
-}
-
-.service-content p {
-
-    color: #666;
-
-    line-height: 1.8;
-
-}
-
-/* ===================================
-   OFFER BOXES
-=================================== */
-
-.offer-box {
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 18px 22px;
-
+.service-card h4 {
+    font-family: "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3;
     margin-bottom: 18px;
-
-    background: #fff;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
-
-    transition: .3s;
-
 }
 
-.offer-box:hover {
-
-    transform: translateX(10px);
-
-    background: #002850;
-
-    color: #fff;
-
+.service-card p {
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
 }
 
-.offer-box i {
-
-    color: #D4AF37;
-
-    font-size: 22px;
-
-    margin-right: 15px;
-
-}
-
-/* ===================================
-   COMPANY
-=================================== */
-
-.company-img {
-
+.bottom-line {
     width: 100%;
-
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
-
+    height: 3px;
+    background: #b9b4d9;
+    margin-top: 60px;
 }
 
-/* ===================================
-   CATEGORY
-=================================== */
+/* ===========================
+   WE OFFER
+=========================== */
 
-.category-card {
-
-    background: #f8f9fa;
-
-    padding: 40px;
-
-    border-radius: 18px;
-
-    text-align: center;
-
-    transition: .3s;
-
+.offer-list {
+    display: inline-block;
+    text-align: left;
+    margin: auto;
 }
 
-.category-card:hover {
-
-    background: #002850;
-
-    color: #fff;
-
-    transform: translateY(-8px);
-
+.offer-list p {
+    font-size: 22px;
+    margin-bottom: 18px;
+    line-height: 1.6;
 }
-
-.category-card i {
-
-    font-size: 45px;
-
-    color: #D4AF37;
-
-    margin-bottom: 20px;
-
-}
-
-/* ===================================
-   GALLERY
-=================================== */
 
 .gallery-section {
-
+    color: #0c0c0c;
     padding: 80px 0;
-
 }
 
-.gallery-card {
-
-    overflow: hidden;
-
-    border-radius: 20px;
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
-
+.gallery-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
-.gallery-img {
+.gallery-description {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
 
+/* LONG BOX */
+.gallery-nav {
+    display: flex;
     width: 100%;
-
-    height: 250px;
-
-    object-fit: cover;
-
-    transition: .5s;
-
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #d9d9d9;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.gallery-card:hover .gallery-img {
+/* 3 EQUAL PARTS */
+.gallery-link {
+    flex: 1;
+    text-decoration: none;
+    color: #002850;
+    font-weight: 600;
+    font-size: 20px;
 
-    transform: scale(1.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    min-height: 90px;
+
+    border-right: 1px solid #bfbfbf;
+
+    transition: .3s;
 }
 
-/* ===================================
-   BUTTON
-=================================== */
-
-.btn-warning {
-
-    background: #D4AF37;
-
-    border: none;
-
-    padding: 14px 35px;
-
-    font-weight: 700;
-
-    border-radius: 50px;
-
+.gallery-link:last-child {
+    border-right: none;
 }
 
-.btn-warning:hover {
-
-    background: #b99222;
-
+.gallery-link:hover {
+    background: #0d6efd;
+    color: #fff;
 }
 
-/* ===================================
-   MOBILE
-=================================== */
-
-@media(max-width:991px) {
-
-    .hero-title {
-
-        font-size: 40px;
-
-    }
-
-    .hero-img {
-
-        margin-top: 40px;
-
-    }
-
-    .service-image {
-
-        height: 220px;
-
-    }
-
-    .gallery-img {
-
-        height: 180px;
-
-    }
-
+/* ==============================
+   Offer Section - centering fixes
+============================== */
+.offer-section {
+    padding: 60px 0;
 }
 
-@media(max-width:768px) {
+.offer-section .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 200px;
+}
 
-    .hero-title {
+.offer-section .offer-list {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: left;
+}
 
-        font-size: 32px;
-
-    }
-
-    .section-title {
-
-        font-size: 30px;
-
-    }
-
-    .offer-box {
-
-        font-size: 15px;
-
-    }
-
+.gallery-link {
+    text-decoration: none;
 }
