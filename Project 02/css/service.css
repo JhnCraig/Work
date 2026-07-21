@@ -1,3 +1,87 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+    color: #002850 !important;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar .nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    /* Adjust spacing */
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   CTA
+========================================== */
+
+.cta-section {
+    background:
+        linear-gradient(rgba(0, 40, 80, .80),
+            rgba(0, 40, 80, .80)),
+        url("img/cta.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 120px 0;
+
+    color: #fff;
+
+    position: relative;
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.cta-section h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.cta-section p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
 /* ==============================
    HAMBURGER MENU
 ============================== */
@@ -18,6 +102,27 @@
 
 .navbar.scrolled .navbar-toggler-icon {
     filter: none;
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE FIX
+========================================== */
+@media (max-width: 991.98px) {
+
+    /* General spacing */
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
 }
 
 /* ==============================
@@ -173,131 +278,95 @@
    WE OFFER
 =========================== */
 
+.offer-list {
+    display: inline-block;
+    text-align: left;
+    margin: auto;
+}
+
+.offer-list p {
+    font-size: 22px;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.gallery-section {
+    color: #0c0c0c;
+    padding: 80px 0;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.gallery-description {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* LONG BOX */
+.gallery-nav {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #d9d9d9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 3 EQUAL PARTS */
+.gallery-link {
+    flex: 1;
+    text-decoration: none;
+    color: #002850;
+    font-weight: 600;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 90px;
+
+    border-right: 1px solid #bfbfbf;
+
+    transition: .3s;
+}
+
+.gallery-link:last-child {
+    border-right: none;
+}
+
+.gallery-link:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* ==============================
+   Offer Section - centering fixes
+============================== */
 .offer-section {
     padding: 60px 0;
 }
 
-.offer-line {
-    width: 100%;
-    height: 3px;
-    background: #b8b4d8;
-    margin-bottom: 40px;
-}
-
-.offer-title {
-    font-family: "Times New Roman", serif;
-    font-size: 42px;
-    font-weight: 700;
-}
-
-.offer-section p {
-    font-size: 22px;
-    font-family: "Times New Roman", serif;
-    margin-bottom: 15px;
-}
-
-.offer-section p {
-    margin-bottom: 18px;
-    font-size: 22px;
-}
-
-.offer-section .col-lg-4 {
+.offer-section .row {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding-left: 200px;
 }
 
-.offer-list {
-    width: fit-content;
+.offer-section .offer-list {
+    max-width: 420px;
     margin: 0 auto;
     text-align: left;
 }
 
-.offer-list p {
-    margin-bottom: 18px;
-    font-size: 22px;
-    font-family: "Times New Roman", serif;
-}
-
-/* Responsive */
-
-@media (max-width:991px) {
-
-    .offer-title {
-        font-size: 28px;
-    }
-
-    .offer-list {
-        margin-bottom: 25px;
-    }
-
-    .offer-list li {
-        font-size: 22px;
-    }
-
-}
-
-@media (max-width:576px) {
-
-    .offer-title {
-        font-size: 24px;
-    }
-
-    .offer-list li {
-        font-size: 18px;
-    }
-
-}
-
-/* ==========================
-   PHOTO GALLERY
-========================== */
-
-.gallery-section {
-    padding: 70px 0 0;
-    background: #fff;
-}
-
-.gallery-title {
-    font-family: "Times New Roman", serif;
-    font-size: 44px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.gallery-description {
-    max-width: 700px;
-    margin: 0 auto 60px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-.gallery-tabs {
-    width: 100%;
-    height: 70px;
-    background: #d9d9d9;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.gallery-tabs a {
+.gallery-link {
     text-decoration: none;
-    color: #000;
-    font-family: "Times New Roman", serif;
-    font-size: 22px;
-    padding: 10px 20px;
-}
-
-.gallery-tabs a:hover {
-    background: #c8c8c8;
-}
-
-.gallery-section {
-    background-color: #002850;
-    color: white;
-    padding: 50px 0;
 }

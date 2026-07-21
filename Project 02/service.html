@@ -7,7 +7,7 @@
     <title>SBDC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/service.css">
 
 </head>
 
@@ -36,7 +36,7 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link" href="index.html">HOME</a>
                     </li>
 
                     <li class="nav-item">
@@ -44,7 +44,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="service.html">SERVICES</a>
+                        <a class="nav-link" href="#">SERVICES</a>
                     </li>
 
                     <li class="nav-item">
@@ -75,7 +75,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card">
 
-                        <img src="img/ex.jpg" width="100%">
+                        <img src="img/ex.jpg" class="service-img" alt="Engineering Design">
                         <h4>Architectural &<br>Engineering Design</h4>
 
                         <p>
@@ -142,7 +142,7 @@
                 We offer the following:
             </h2>
 
-            <div class="row justify-content-center gx-2">
+            <div class="row row-md-1 justify-content-center gx-2 ">
 
                 <div class="col-lg-5 col-md-6">
                     <div class="offer-list">
@@ -164,37 +164,66 @@
                     </div>
                 </div>
 
+
             </div>
 
         </div>
     </section>
 
     <!-- Photo Gallery Section -->
-    <section class="gallery section">
-        <div class="container text-center">
-            <h1 class="mb-5">PHOTO GALLERY</h1>
+    <section class="gallery-section">
 
-            <p class="gallery-description">
-                Discover the quality and craftsmanship behind our completed projects.
-                Our gallery features a wide range of services, including construction,
-                electrical installations, solar energy solutions, repairs, maintenance,
-                and other engineering works. Every project reflects our commitment to
-                delivering safe, reliable, and high-quality results for every client.
-            </p>
+        <div class="container">
 
-            <div class="gallery-tabs">
-                <div class="col-md-3">
-                    <p>General Construction</p>
-                </div>
-                <div class="col-md-3">
-                    <p>Architectural & Engineering Design</p>
-                </div>
-                <div class="col-md-3">
-                    <p>Electro - Mechanical Works</p>
-                </div>
+            <div class="row text-center justify-content-left">
+                <h2 class="gallery-title">PHOTO GALLERY</h2>
+
+                <p class="gallery-description">
+                    Discover the quality and craftsmanship behind our completed projects.
+                    Our gallery features a wide range of services including construction,
+                    electrical installations, solar energy solutions, repairs,
+                    maintenance, and engineering works.
+                </p>
             </div>
+
+            <div class="shadow-lg d-flex justify-content-center flex-wrap gap-3 mt-4 p-2">
+
+                <a href="general-construction.html" class="gallery-link">
+                    General Construction
+                </a>
+
+                <a href="architectural-design.html" class="gallery-link">
+                    Architectural & Engineering Design
+                </a>
+
+                <a href="electro-mechanical.html" class="gallery-link">
+                    Electro - Mechanical Works
+                </a>
+
+            </div>
+
         </div>
+
+
     </section>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            const heroSection = document.querySelector('.hero-section');
+
+            // Kunin ang distansya ng hero section sa bottom
+            const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+            // Kung ang hero section ay wala na sa taas (heroBottom < 80), mag-trigger ng "scrolled"
+            if (heroBottom < 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
 </body>
 
 </html>
