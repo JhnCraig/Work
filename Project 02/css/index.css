@@ -158,20 +158,13 @@
 
 /* RECENT PROJECTS */
 
-.section-title {
-    color: #002850;
-    font-size: 38px;
-    font-weight: 700;
-}
-
 .project-card {
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
-    cursor: pointer;
-    transition: .35s;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
-    border: 1px solid #e5e5e5;
+    transition: .35s;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -180,12 +173,15 @@
 }
 
 .project-image {
+    width: 100%;
+    height: 280px;
     overflow: hidden;
 }
 
 .project-image img {
     width: 100%;
-    height: 280px;
+    height: 100%;
+    display: block;
     object-fit: cover;
     transition: .4s;
 }
@@ -198,25 +194,14 @@
     padding: 25px;
 }
 
-.project-category {
-    display: inline-block;
-    background: #002850;
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 30px;
-    font-size: 13px;
-    margin-bottom: 15px;
-}
-
 .project-content h4 {
     color: #002850;
     font-weight: 700;
-    margin-bottom: 10px;
 }
 
 .project-content p {
     color: #666;
-    margin: 0;
+    margin-bottom: 0;
 }
 
 /* ==========================
