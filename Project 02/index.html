@@ -60,17 +60,37 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section"
-        style="background: linear-gradient(rgba(0, 40, 80, 0.7), rgba(0, 40, 80, 0.7)), url('img/Hb.jpg');">
+    <header class="hero-section">
+
         <div class="container">
-            <div class="col-md-8 text-white">
-                <h1 class="display-3 fw-bold">Delivering Architectural Excellence, from Blueprint to Reality.</h1>
-                <div class="mt-4">
-                    <a href="contact.html" class="btn btn-primary btn-lg me-3">Contact Us</a>
-                    <a href="service.html" class="btn btn-outline-light btn-lg">Learn More</a>
+
+            <div class="row align-items-center min-vh-100">
+
+                <div class="col-lg-8 text-white">
+
+                    <h1 class="display-3 fw-bold">
+                        Delivering Architectural Excellence,
+                        from Blueprint to Reality.
+                    </h1>
+
+                    <div class="mt-4">
+
+                        <a href="contact.html" class="btn btn-primary btn-lg me-3">
+                            Contact Us
+                        </a>
+
+                        <a href="service.html" class="btn btn-outline-light btn-lg">
+                            Learn More
+                        </a>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </header>
 
     <!-- About & Values Section -->
@@ -524,20 +544,74 @@
     </footer>
 
     <script>
+
         const navbar = document.querySelector(".navbar");
-        const hero = document.querySelector(".hero-section");
+
+        const sections = document.querySelectorAll("section,header");
 
         window.addEventListener("scroll", () => {
 
-            const heroBottom = hero.offsetTop + hero.offsetHeight - 80;
+            let dark = false;
 
-            if (window.scrollY > heroBottom) {
-                navbar.classList.add("scrolled");
-            } else {
+            sections.forEach(section => {
+
+                const rect = section.getBoundingClientRect();
+
+                if (rect.top <= 100 && rect.bottom >= 100) {
+
+                    if (section.classList.contains("why-us-section") ||
+                        section.classList.contains("footer")) {
+
+                        dark = true;
+
+                    }
+
+                }
+
+            });
+
+            if (dark) {
+
                 navbar.classList.remove("scrolled");
+
+            } else {
+
+                if (window.scrollY > 250) {
+
+                    navbar.classList.add("scrolled");
+
+                } else {
+
+                    navbar.classList.remove("scrolled");
+
+                }
+
             }
 
         });
+
+        const whySection = document.querySelector(".why-us-section");
+
+        window.addEventListener("scroll", () => {
+
+            const rect = whySection.getBoundingClientRect();
+
+            if (rect.top <= 100 && rect.bottom >= 100) {
+
+                navbar.classList.remove("scrolled");
+
+            } else {
+
+                if (window.scrollY > 250) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+
+            }
+
+        });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
