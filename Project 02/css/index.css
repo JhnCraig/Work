@@ -373,119 +373,63 @@
    FOOTER
 ========================================== */
 
-
-.footer h4,
-.footer h5 {
-    color: #000000;
-    margin-bottom: 20px;
-}
-
-.footer p {
-    color: #000000;
-    line-height: 1.8;
-}
-
-.footer ul {
-    padding: 0;
-}
-
-.footer ul li {
-    list-style: none;
-    margin-bottom: 10px;
-}
-
-.footer ul li a {
-    color: #000000;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.footer ul li a:hover {
-    color: #D4AF37;
-    padding-left: 5px;
-}
-
-.footer hr {
-    margin: 40px 0 20px;
-    border-color: rgba(20, 20, 20, 0.15);
-}
-
-/* ==========================
-        FOOTER
-========================== */
-
 .footer {
-    background: #002850;
-    color: #fff;
-    padding: 70px 0 25px;
+    background: transparent;
+    padding: 60px 0 20px;
+}
+
+.footer img {
+    width: 80px;
+    margin-bottom: 18px;
 }
 
 .footer h4 {
-    color: #fff;
+    color: #000;
+    font-size: 2rem;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .footer-text {
-    color: #d9d9d9;
-    max-width: 650px;
-    margin: auto;
-    line-height: 1.8;
-}
-
-.footer-contact {
-    margin-top: 35px;
-}
-
-.footer-contact p {
-    margin-bottom: 18px;
+    color: #555;
     font-size: 16px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 30px;
 }
 
-.footer-contact i {
-    color: #D4AF37;
-    width: 30px;
-    font-size: 20px;
-}
-
-.footer-contact a {
-    color: #fff;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.footer-contact a:hover {
-    color: #D4AF37;
-    text-decoration: underline;
-}
-
-.footer hr {
-    border-color: rgba(255, 255, 255, .2);
-    margin: 45px 0 20px;
-}
-
-.copyright {
-    color: #d6d6d6;
-    font-size: 14px;
-}
-
+/* Social Icons */
 .social-icon {
     display: inline-flex;
-    align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    margin: 0 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, .12);
-    color: #fff;
-    font-size: 18px;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    margin: 0 10px;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
     transition: .3s;
 }
 
 .social-icon:hover {
-    background: #D4AF37;
-    color: #002850;
+    color: #D4AF37;
     transform: translateY(-4px);
+}
+
+/* Divider */
+.footer hr {
+    width: 70%;
+    margin: 45px auto 20px;
+    border: none;
+    border-top: 1px solid #d9d9d9;
+}
+
+/* Copyright */
+.copyright {
+    color: #666;
+    font-size: 15px;
+    text-align: center;
 }
 
 /* ==============================
