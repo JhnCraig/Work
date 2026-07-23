@@ -60,17 +60,37 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section"
-        style="background: linear-gradient(rgba(0, 40, 80, 0.7), rgba(0, 40, 80, 0.7)), url('img/Hb.jpg');">
+    <header class="hero-section">
+
         <div class="container">
-            <div class="col-md-8 text-white">
-                <h1 class="display-3 fw-bold">Delivering Architectural Excellence, from Blueprint to Reality.</h1>
-                <div class="mt-4">
-                    <a href="contact.html" class="btn btn-primary btn-lg me-3">Contact Us</a>
-                    <a href="service.html" class="btn btn-outline-light btn-lg">View Services</a>
+
+            <div class="row align-items-center min-vh-100">
+
+                <div class="col-lg-8 text-white">
+
+                    <h1 class="display-3 fw-bold">
+                        Delivering Architectural Excellence,
+                        from Blueprint to Reality.
+                    </h1>
+
+                    <div class="mt-4">
+
+                        <a href="contact.html" class="btn btn-primary btn-lg me-3">
+                            Contact Us
+                        </a>
+
+                        <a href="service.html" class="btn btn-outline-light btn-lg">
+                            Learn More
+                        </a>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </header>
 
     <!-- About & Values Section -->
@@ -487,18 +507,18 @@
                         management solutions with quality, integrity, and excellence.
                     </p>
 
-                    <div class="mt-4">
+                    <div class="d-flex justify-content-center align-items-center gap-3 mt-4 mb-4">
 
-                        <a href="mailto:sbdc.information@gmail.com" class="social-icon">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kwyns.v@gmail.com&su=Inquiry%20from%20SBDC%20Website"
+                            target="_blank" class="social-icon" aria-label="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
 
-                        <a href="https://www.facebook.com/SorgenBuildersandDevelopmentCorporation" target="_blank"
-                            class="social-icon">
+                        <a href="https://www.facebook.com/sorgenbuilders" target="_blank" class="social-icon">
                             <i class="fab fa-facebook-f"></i>
                         </a>
 
-                        <a href="https://sorgenbuilders.com" target="_blank" class="social-icon">
+                        <a href="https://sbdc-information.weebly.com" target="_blank" class="social-icon">
                             <i class="fas fa-globe"></i>
                         </a>
 
@@ -515,7 +535,7 @@
             <hr>
 
             <div class="text-center copyright">
-                © 2026 Sorgen Builders and Development Corporation.
+                © 2020 Sorgen Builders and Development Corporation.
                 All Rights Reserved.
             </div>
 
@@ -524,20 +544,74 @@
     </footer>
 
     <script>
+
         const navbar = document.querySelector(".navbar");
-        const hero = document.querySelector(".hero-section");
+
+        const sections = document.querySelectorAll("section,header");
 
         window.addEventListener("scroll", () => {
 
-            const heroBottom = hero.offsetTop + hero.offsetHeight - 80;
+            let dark = false;
 
-            if (window.scrollY > heroBottom) {
-                navbar.classList.add("scrolled");
-            } else {
+            sections.forEach(section => {
+
+                const rect = section.getBoundingClientRect();
+
+                if (rect.top <= 100 && rect.bottom >= 100) {
+
+                    if (section.classList.contains("why-us-section") ||
+                        section.classList.contains("footer")) {
+
+                        dark = true;
+
+                    }
+
+                }
+
+            });
+
+            if (dark) {
+
                 navbar.classList.remove("scrolled");
+
+            } else {
+
+                if (window.scrollY > 250) {
+
+                    navbar.classList.add("scrolled");
+
+                } else {
+
+                    navbar.classList.remove("scrolled");
+
+                }
+
             }
 
         });
+
+        const whySection = document.querySelector(".why-us-section");
+
+        window.addEventListener("scroll", () => {
+
+            const rect = whySection.getBoundingClientRect();
+
+            if (rect.top <= 100 && rect.bottom >= 100) {
+
+                navbar.classList.remove("scrolled");
+
+            } else {
+
+                if (window.scrollY > 250) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+
+            }
+
+        });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

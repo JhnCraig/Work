@@ -273,52 +273,74 @@
     </section>
 
     <!-- ================= FOOTER ================= -->
-
     <footer class="footer">
 
         <div class="container">
 
-            <div class="row">
+            <div class="row justify-content-center">
 
-                <div class="col-lg-3">
+                <div class="col-lg-8 text-center">
 
-                    <h5>Contact</h5>
+                    <img src="img/Logo.svg" alt="SBDC Logo" width="75" class="mb-3">
 
-                    <p>(0917) 118 8153</p>
+                    <h4 class="mb-3">
+                        Sorgen Builders and Development Corporation
+                    </h4>
 
-                    <p>sbdc.information@gmail.com</p>
+                    <p class="footer-text">
+                        Delivering trusted engineering, construction, and project
+                        management solutions with quality, integrity, and excellence.
+                    </p>
 
+                    <div class="d-flex justify-content-center align-items-center gap-3 mt-4 mb-4">
+
+                        <a href="mailto:sbdc.information@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/SorgenBuildersandDevelopmentCorporation" target="_blank"
+                            class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://sorgenbuilders.com" target="_blank" class="social-icon">
+                            <i class="fas fa-globe"></i>
+                        </a>
+
+                        <a href="https://maps.google.com/?q=Park+Place,+San+Rafael,+Santo+Tomas,+Batangas"
+                            target="_blank" class="social-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </a>
+
+                    </div>
                 </div>
 
             </div>
 
             <hr>
 
-            <div class="text-center">
-
-                © 2026 Sorgen Builders and Development Corp.
+            <div class="text-center copyright">
+                © 2020 Sorgen Builders and Development Corporation.
                 All Rights Reserved.
-
             </div>
 
         </div>
 
     </footer>
-
     <script>
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            const heroSection = document.querySelector('.hero-section');
+        const navbar = document.querySelector(".navbar");
+        const hero = document.querySelector(".hero-section");
 
-            // Kunin ang distansya ng hero section sa bottom
-            const heroBottom = heroSection.getBoundingClientRect().bottom;
+        window.addEventListener("scroll", () => {
 
-            // Kung ang hero section ay wala na sa taas (heroBottom < 80), mag-trigger ng "scrolled"
-            if (heroBottom < 80) {
-                navbar.classList.add('scrolled');
+            const heroBottom = hero.offsetTop + hero.offsetHeight - 80;
+
+            if (window.scrollY > heroBottom) {
+                navbar.classList.add("scrolled");
             } else {
-                navbar.classList.remove('scrolled');
+                navbar.classList.remove("scrolled");
             }
+
         });
     </script>
 
