@@ -85,6 +85,18 @@
 
 }
 
+.service-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-card {
+    cursor: pointer;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
 /* WHY CHOOSE US */
 
 .why-us-section {
